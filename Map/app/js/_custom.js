@@ -30,5 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.leaflet-control-zoom-in').attr('title','Приблизить')
 	$('.leaflet-control-zoom-out').attr('title','Отдалить')
 
-
+//----добавлние общего вида
+	$('.leaflet-control-zoom-in').after('<a class="reset-zoom" ><i class="fas fa-globe"></i></a>')
 });
