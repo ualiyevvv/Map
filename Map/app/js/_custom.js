@@ -21,9 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		zoom: 11,
 		layers: [streets]
 	});
-
+//----печать
 	$('#print_map').click(function() {
 		print();
 	});
+
+//----title для приюлижения и отдаления
+	$('.leaflet-control-zoom-in').attr('title','Приблизить')
+	$('.leaflet-control-zoom-out').attr('title','Отдалить')
+
 
 });
