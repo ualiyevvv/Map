@@ -76,4 +76,31 @@ button, button:active, button:hover
 		input
 			padding: 7px 12px
 			border: $border
-		
+	
+	&-controls
+		position: relative
+		display: inline-block
+		z-index: 800
+		margin-top: 10px
+		margin-right: 10px
+		float: right
+		border: $border
+		border-radius: 4px
+		button
+			display: block
+			height: 35px
+			width: 35px
+			font-size: 13px
+			background: #ffffff
+			padding: 10px
+			border-bottom: $border
+			transition: .15s
+			&:hover
+				background: #dddddd
+			
+			&:last-child
+				border: 0 
+				border-radius: 0px 0px 4px 4px
+			&:first-child
+				border-radius: 4px 4px 0 0 
+				
