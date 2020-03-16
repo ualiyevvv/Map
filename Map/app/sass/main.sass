@@ -73,16 +73,21 @@ button, button:active, button:hover
 		z-index: 800
 		margin-top: 10px
 		margin-left: 10px
+		width: 300px
 		input
 			padding: 5px 12px
 			border: $border
 			font-size: 14px
+			border-radius: 4px 0 4px 0
+			width: 260px
 		button
 			padding: 5px 10px
 			font-size: 14px
 			border: $border
 			transition: .15s
 			background: #eeeeee
+			border-radius: 0 4px 4px 0
+			margin-left: -4px
 			&:hover
 				background: #ddd	
 	&-controls			
@@ -100,21 +105,17 @@ button, button:active, button:hover
 			background: #ffffff
 			padding: 10px
 			border-bottom: $border
-			transition: .15s
-			
+			transition: .15s		
 			&:hover
-
 				background: #dddddd
-			
-
 			&:last-child
 				border: 0 
 				border-radius: 0 0 4px 4px
 			&:first-child
 				border-radius: 4px 4px 0 0
-.block-main
-	border: $border
-	margin-bottom: 15px
-	border-radius: 4px
+		&__group
+			border: $border
+			margin-bottom: 15px
+			border-radius: 4px
 
 

@@ -22,4 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		layers: [streets]
 	});
 
+	$('#print_map').click(function() {
+		print();
+	});
+
 });
