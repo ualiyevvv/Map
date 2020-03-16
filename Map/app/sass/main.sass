@@ -90,89 +90,60 @@ button, button:active, button:hover
 			margin-left: -4px
 			&:hover
 				background: #ddd	
-	&-controls__group__horizon
-			button 
-				border-bottom: $border
-		border: $border
-	&-controls__group
-	
-		margin-top: 150px
-		border: $border
-		border-radius: 4px 4px 4px 4px
-		button
-			&:first-child
-				border-radius: 4px 4px 4px 4px 
-		
 
-	&-controls__group, &-controls__group__horizon	
-		// position: relative
-		// display: inline-block
-		// z-index: 800
-		// margin-top: 10px
-		// margin-right: 10px
-		// float: right
-		right: 0
-		top: 0
+	&-controls
 		z-index: 800
 		position: absolute
-		margin-top: 180px
-		margin-right: 10px
-		&__horizon
-			display: flex
-			top: 0
-			right: 0
-			margin-top: 10px
-			border-radius: 4px 4px 4px 4px
-			button
-				&:last-child
-				border: 0 
-				border-radius: 4px 0 0 4px
-				&:first-child
-
-
-			margin-right: 10px
-			&:last-child
-				border: 0 
-				border-radius: 4px 4px 0 0
-			&:first-child
-				
+	&-controls--horizontal
+		right: 15px
+		top: 10px
 		button
-			display: block
-			height: 35px
 			width: 35px
-			font-size: 13px
+			height: 35px
 			background: #ffffff
-			padding: 10px
-			transition: .15s		
-			&:hover
-				background: #dddddd
-			&:last-child
-				border: 0 
-				border-radius: 0 0 4px 4px 
+			border: $border
+			margin-right: -5px
 			&:first-child
-		// &__group
-		// 	border: $border
-		// 	margin-bottom: 15px
-		// 	border-radius: 4px
-
-		   		border-radius: 4px 4px 0 0 
-		// &__group__horizon
-			
-		// 	border: $border
-		// 	border-radius: 4px
-
+				border-radius: 4px 0 0 4px
+			&:last-child
+				border-radius: 0 4px 4px 0
+				width: 40px
+				color: #555
+	&-controls--vertical
+		right: 9px
+		top: 190px
+		button
+			width: 37px
+			height: 40px
+			background: #ffffff
+			border: $border
+			margin-bottom: -5px
+			display: block
+			&:first-child
+				border-radius: 4px 4px 0 0
+			&:last-child
+				border-radius: 0 0 4px 4px							
+	
 .leaflet-top, .leaflet-left
 	margin-right: 15px
 	width: 35px
 	display: flex
 	justify-content: center
 
-.leaflet-control-zoom-in,.reset-zoom,.leaflet-control-zoom-out
-	width: 35px
-	height: 35px
+.leaflet-control-zoom 
+	a
+		display: flex
+		justify-content: center
+		align-items: center
 
-
-.leaflet-control-zoom a
-	display: flex
-	justify-content: center
-	align-items: center
+.leaflet-bar
+	a
+		width: 35px
+		height: 35px
+		&:hover
+			width: 35px
+			height: 35px
+			line-height: 35px	
+		&:last-child:hover
+			line-height: 36px
+				
