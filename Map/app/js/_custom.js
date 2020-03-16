@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+	
 
 	var mbAttr = ' <a href="#"></a>',
 			mbUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		zoom: 11,
 		layers: [streets]
 	});
+
+	
 //----печать
 	$('#print_map').click(function() {
 		print();
@@ -32,4 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //----добавлние общего вида
 	$('.leaflet-control-zoom-in').after('<a class="reset-zoom" ><i class="fas fa-globe"></i></a>')
+
+	const defaultZoom = 11;
+	
+
+	$('.reset-zoom').click(function() {
+		let lat = map._lastCenter.lat
+		let lng = map._lastCenter.lng
+		map.setView([lat,lng],defaultZoom)
+	});
+
 });
