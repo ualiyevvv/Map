@@ -253,17 +253,37 @@ button, button:active, button:hover
 			transition: .15s
 			&:hover
 				background: #ddd
-
+	&-feedback__overlay
+		position: absolute
+		z-index: 800
+		top: 0 
+		right: 0 
+		left: 0 
+		bottom: 0 
+		height: 100vh
+		background: rgba(0,0 ,0 ,0.5 )
+		visibility: hidden
+		opacity: 0
+		transition: .25s
+		&.show-popup
+			opacity: 1
+			visibility: visible
 	&-feedback
 		background: #fff
 		position: relative
-		z-index: 800
+		z-index: 801
 		width: 390px
 		height: 650px
 		border-radius: 4px
 		text-align: center
-		left: 50%
+		left: 50% 
 		transform: translateX(-50%)
+		visibility: hidden
+		opacity: 0
+		transition: .25s
+		&.show-popup
+			opacity: 1
+			visibility: visible
 		&__input
 			display: flex
 			justify-content: center				
@@ -287,8 +307,11 @@ button, button:active, button:hover
 			padding: 10px 0
 
 
+	
 
-
+#close_message-map
+	margin-top: 5px
+	margin-right: 10px
 	
 .leaflet-top, .leaflet-left
 	margin-right: 15px

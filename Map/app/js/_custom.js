@@ -62,4 +62,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.main-filter').removeClass('show');
 	});
 
+	$('#open_feedback').click(function(){	
+		$('#main-feedback').addClass('show-popup')
+		$('.main-feedback__overlay').addClass('show-popup')
+	});
+
+	$('#close_message-map').click(function(){	
+		$('#main-feedback').removeClass('show-popup')
+		$('.main-feedback__overlay').removeClass('show-popup')
+	});
 });
