@@ -185,7 +185,59 @@ button, button:active, button:hover
 			&:first-child
 				border-radius: 4px 4px 0 0
 			&:last-child
-				border-radius: 0 0 4px 4px							
+				border-radius: 0 0 4px 4px
+			img
+				width: 14px
+				margin-left: 1px
+
+	&-filter
+		background: #fff
+		border-radius: 4px
+		padding: 20px
+		position: absolute
+		z-index: 800
+		display: inline-block
+		right: 53px
+		top: 96px
+		text-align: center
+		transform: translateX(200%)
+		opacity: 0
+		visibility: hidden
+		transition: .25s
+		&.show
+			transform: translateX(0)
+			visibility: visible
+			opacity: 1
+		h2
+			font-size: 18px
+			margin-bottom: 12px
+			i
+				font-size: 15px
+		&__search
+			border-bottom: $border
+			margin-bottom: 20px
+			input 
+				font-size: 14px		
+		&__input
+			border: $border
+			&:last-of-type
+				margin-top: 7px
+			input
+				padding: 5px
+		&__btn
+			background: #eee
+			margin-top: 25px
+			border-radius: 50px
+			padding: 5px 22px	
+			transition: .15s
+			&:hover
+				background: #ddd
+
+
+
+
+
+
 	
 .leaflet-top, .leaflet-left
 	margin-right: 15px
@@ -206,8 +258,8 @@ button, button:active, button:hover
 	font-size: 13px !important
 	padding-left: 1px
 
-// .leaflet-right
-// 	display: none	
+.leaflet-right
+	display: none	
 
 .leaflet-bar
 	a

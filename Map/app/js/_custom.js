@@ -44,15 +44,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.leaflet-control-zoom-out').attr('title','Отдалить')
 
 //----добавлние общего вида
-	$('.leaflet-control-zoom-in').after('<a class="reset-zoom" ><i class="fas fa-globe"></i></a>')
+	$('.leaflet-control-zoom-in').after('<a class="reset-zoom" title="Сбросить зум"><i class="fas fa-globe"></i></a>')
 
 	const defaultZoom = 11;
-	
 
 	$('.reset-zoom').click(function() {
 		let lat = map._lastCenter.lat
 		let lng = map._lastCenter.lng
 		map.setView([lat,lng],defaultZoom)
+	});
+
+	$('#filter_map').click(function(){
+		$('.main-filter').toggleClass('show');
 	});
 
 });
