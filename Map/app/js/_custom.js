@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 	
+	// PRELOADER CODE
+
+	setTimeout(function() {
+		let preloader = document.getElementById('preloader');
+		if(!preloader.classList.contains('done')) {
+			preloader.classList.add('done')
+		}
+	},1000);
+
+	// ------------------------
 
 	var mbAttr = ' <a href="#"></a>',
 			mbUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
