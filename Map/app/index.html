@@ -29,7 +29,9 @@
 		</div>
 	</div>	
 
-	<main id="map" class="main">
+	<main id="mapf" class="main">
+
+		<div id="map"></div>
 
 		<div class="main-search">
 
@@ -54,9 +56,9 @@
 
 		<nav class="main-controls main-controls--vertical">
 
-			<button id="filter_map" title="Настройки"><i class="fas fa-sliders-h"></i></button> 
-			<button title="Сообщения"><i class="fas fa-comment-alt-lines"></i></button> 
-			<button id="print_map" title="Печать"><img src="img/printer.png" alt="Иконка распечатки"></button> 
+			<a id="filter_map" title="Настройки"><i class="fas fa-sliders-h"></i></a> 
+			<a id="open_feedback" href="#main-feedback" title="Сообщения"><i class="fas fa-comment-alt-lines"></i></a> 
+			<a id="print_map" title="Печать"><img src="img/printer.png" alt="Иконка распечатки"></a> 
 
 		</nav>
 
@@ -75,8 +77,10 @@
 
 		</nav>
 
-		<div class="main-feedback">
+		<div class="main-feedback mfp-hide" id="main-feedback">
+
 			<h2>Отправить запрос</h2>
+
 			<div class="main-feedback__input"><input type="text" placeholder="Ф.И.О"></div>
 			<div class="main-feedback__input"><input type="text" placeholder="Страна"></div>
 			<div class="main-feedback__input"><input type="text" placeholder="Наименование компание"></div>
@@ -85,7 +89,9 @@
 			<div class="main-feedback__input"><input type="text" placeholder="E-mail"></div>
 			<div class="main-feedback__input"><input type="text" placeholder="Адресс компание"></div>
 			<div class="main-feedback__input"><textarea type="text" placeholder="Текст запроса"></textarea></div>
+
 			<button class="main-filter__btn" type="submit">Отправить</button>
+
 		</div>
 
 	</main>
