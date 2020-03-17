@@ -55,7 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	$('#filter_map').click(function(){
-		$('.main-filter').toggleClass('show');
+		$('.main-filter').addClass('show');
+	});
+
+	$('#close_filter-map').click(function(){
+		$('.main-filter').removeClass('show');
 	});
 
 });
