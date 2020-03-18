@@ -266,6 +266,7 @@ button, button:active, button:hover
 		opacity: 0
 		transition: .25s
 		&.show-popup
+			
 			opacity: 1
 			visibility: visible
 	&-feedback
@@ -305,8 +306,38 @@ button, button:active, button:hover
 			margin-bottom: 20px
 			border-bottom: $border
 			padding: 10px 0
-
-
+	&-satellite
+		position: absolute
+		z-index: 800
+		background: #fff
+		border-radius: 4px
+		text-align: center
+		top: 50px
+		right: 52px
+		width: 200px
+		height: 250px
+		visibility: hidden
+		opacity: 0
+		padding: 20px 
+		transition: .25s
+		transform: translateY(-70%)
+		&__cross
+			position: absolute
+			top: -5px
+			right: 25px
+			font-size: 30px
+			button 
+				width: 5px
+				height: 2px
+		&.show
+			transform: translateY(0)
+			opacity: 1
+			visibility: visible
+		h2 
+			font-size: 15px
+			margin-bottom: 40px
+			border-bottom: $border
+			padding: 10px 0	
 	
 
 #close_message-map
