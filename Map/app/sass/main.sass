@@ -131,6 +131,8 @@ button, button:active, button:hover
 		background: #cfcfcf
 
 .main
+	height: 100vh
+	overflow: hidden
 	&-search
 		position: relative
 		display: flex
@@ -172,7 +174,9 @@ button, button:active, button:hover
 		position: absolute
 		a, button
 			&:hover
-				background: #eee		
+				background: #eee
+			&.active-btns
+				background: darken(#eee, 3%)
 	&-controls--horizontal
 		right: 15px
 		top: 10px
@@ -257,7 +261,7 @@ button, button:active, button:hover
 	&-feedback__overlay
 		position: absolute
 		z-index: 800
-		top: -10px 
+		top: 0
 		right: 0 
 		left: 0 
 		bottom: 0 
@@ -275,7 +279,7 @@ button, button:active, button:hover
 		position: relative
 		z-index: 801
 		width: 390px
-		height: 50px
+		height: 685px
 		border-radius: 4px
 		text-align: center
 		left: 50% 
@@ -283,13 +287,12 @@ button, button:active, button:hover
 		opacity: 0
 		transition: .25s
 		padding-top: 5px
+		visibility: hidden
 		&.show-popup
 			opacity: 1
-			height: 685px
-			.main-feedback__input
-				display: flex
+			visibility: visible
 		&__input
-			display: none
+			display: flex
 			justify-content: center				
 			input 
 				display: block

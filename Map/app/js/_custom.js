@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	// PRELOADER CODE
 
-	setTimeout(function() {
-		let preloader = document.getElementById('preloader');
-		if(!preloader.classList.contains('done')) {
-			preloader.classList.add('done')
-		}
-	},1000);
+	// setTimeout(function() {
+	// 	let preloader = document.getElementById('preloader');
+	// 	if(!preloader.classList.contains('done')) {
+	// 		preloader.classList.add('done')
+	// 	}
+	// },1000);
 
 	// ------------------------
 
@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$('#close_filter-map').click(function(){
 		$('.main-filter').removeClass('show');
+		$('.active-btns').removeClass('active-btns');
 	});
 //-----------------------------------------------------
 	$('#open_feedback').click(function(){	
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('#close_message-map').click(function(){	
 		$('#main-feedback').removeClass('show-popup')
 		$('.main-feedback__overlay').removeClass('show-popup')
+		$('.active-btns').removeClass('active-btns');
 	});
 //-----------------------------------------------------
 	$('#open_satellites').click(function(){	
@@ -79,14 +81,21 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	$('#close_satellite').click(function(){ 
-		$('#main-satellite').removeClass('show')
-	 });
+		$('#main-satellite').removeClass('show');
+		$('.active-btns').removeClass('active-btns');
+	});
 
 	 $('.main-satellite-list__item').click(function() {
 		let current = $('.main-satellite-list__item.active');
-
 		current.removeClass('active');
 		$(this).addClass('active');
+	});
+
+	$('.main-controls a, .main-controls button').click(function() {
+		let current = $('.main-controls a, .main-controls button');
+
+		current.removeClass('active-btns');
+		$(this).addClass('active-btns');
 	});
 	
 });
