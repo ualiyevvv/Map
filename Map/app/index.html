@@ -29,8 +29,7 @@
 		</div>
 	</div>	 -->
 
-	<main id="mapf" class="main">
-
+	<main  class="main">
 		<div id="map"></div>
 
 		<div class="main-search">
@@ -49,7 +48,7 @@
 
 			<button title="Меню"><i class="fas fa-layer-group"></i></button> 
 			<button title="Условные знаки"><i class="fas fa-info-circle"></i></button>
-			<button title="Режим"><i class="fas fa-map-marker-alt"></i></button> 
+			<button title="Режим" id="open_camera_view"><i class="fas fa-map-marker-alt"></i></button> 
 			<button title="Языки">Рус</button>
 
 		</nav>
@@ -57,7 +56,7 @@
 		<nav class="main-controls main-controls--vertical">
 
 			<a id="filter_map" title="Настройки"><i class="fas fa-sliders-h"></i></a> 
-			<a id="open_feedback" href="#main-feedback" title="Сообщения"><i class="fas fa-comment-alt-lines"></i></a> 
+			<a id="open_feedback"  title="Сообщения"><i class="fas fa-comment-alt-lines"></i></a> 
 			<a id="print_map" title="Печать"><img src="img/printer.png" alt="Иконка распечатки"></a> 
 
 		</nav>
@@ -76,23 +75,29 @@
 			<button class="main-filter__btn">Найти</button>
 
 		</nav>
+			<div class="main-feedback" id="main-feedback">
+					<div class="main-filter__cross">
+						<button id="close_message-map">&times;</button>
+					</div>
+					<h2>Отправить запрос</h2>
 
-		<div class="main-feedback mfp-hide" id="main-feedback">
-
-			<h2>Отправить запрос</h2>
-
-			<div class="main-feedback__input"><input type="text" placeholder="Ф.И.О"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="Страна"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="Наименование компание"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="Телефон"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="Должность"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="E-mail"></div>
-			<div class="main-feedback__input"><input type="text" placeholder="Адресс компание"></div>
-			<div class="main-feedback__input"><textarea type="text" placeholder="Текст запроса"></textarea></div>
-
-			<button class="main-filter__btn" type="submit">Отправить</button>
-
-		</div>
+					<div class="main-feedback__input"><input type="text" placeholder="Ф.И.О"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="Страна"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="Наименование компание"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="Телефон"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="Должность"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="E-mail"></div>
+					<div class="main-feedback__input"><input type="text" placeholder="Адресс компание"></div>
+					<div class="main-feedback__input"><textarea type="text" placeholder="Текст запроса"></textarea></div>
+					<button class="main-filter__btn" type="submit">Отправить</button>
+			</div>
+			<div class="main-satellite" id="main-satellite">
+				<div class="main-satellite__cross">
+					<button id="close_satellite">&times;</button>
+				</div>
+				<h2>Спутник</h2>
+			</div>
+			<div class="main-feedback__overlay" ></div>
 
 	</main>
 

@@ -61,5 +61,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('#close_filter-map').click(function(){
 		$('.main-filter').removeClass('show');
 	});
+//-----------------------------------------------------
+	$('#open_feedback').click(function(){	
+		$('#main-feedback').addClass('show-popup')
+		$('.main-feedback__overlay').addClass('show-popup')
+	});
 
+	$('#close_message-map').click(function(){	
+		$('#main-feedback').removeClass('show-popup')
+		$('.main-feedback__overlay').removeClass('show-popup')
+	});
+//-----------------------------------------------------
+	$('#open_camera_view').click(function(){	
+		$('#main-satellite').addClass('show')
+	});
+
+	$('#close_satellite').click(function(){ 
+		$('#main-satellite').removeClass('show')
+	 });
 });
