@@ -79,4 +79,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('#close_satellite').click(function(){ 
 		$('#main-satellite').removeClass('show')
 	 });
+
+	 $('.main-satellite-list__item').click(function() {
+		let current = $('.main-satellite-list__item.active');
+
+		current.removeClass('active');
+		$(this).addClass('active');
+	});
+	
 });
