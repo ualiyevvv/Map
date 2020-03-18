@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	$('#filter_map').click(function(){
+		$('.show').removeClass('show');
 		$('.main-filter').addClass('show');
 	});
 
@@ -72,8 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.main-feedback__overlay').removeClass('show-popup')
 	});
 //-----------------------------------------------------
-	$('#open_camera_view').click(function(){	
-		$('#main-satellite').addClass('show')
+	$('#open_satellites').click(function(){	
+		$('.show').removeClass('show');
+		$('#main-satellite').addClass('show');
 	});
 
 	$('#close_satellite').click(function(){ 

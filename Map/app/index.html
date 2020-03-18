@@ -48,7 +48,7 @@
 
 			<button title="Меню"><i class="fas fa-layer-group"></i></button> 
 			<button title="Условные знаки"><i class="fas fa-info-circle"></i></button>
-			<button title="Режим" id="open_camera_view"><i class="fas fa-map-marker-alt"></i></button> 
+			<button title="Режим" id="open_satellites"><i class="fas fa-map-marker-alt"></i></button> 
 			<button title="Языки">Рус</button>
 
 		</nav>
@@ -102,6 +102,22 @@
 		<div class="main-satellite" id="main-satellite">
 
 			<div class="main-satellite__cross">
+				<button id="close_satellite">&times;</button>
+			</div>
+
+			<h2>Спутник</h2>
+
+			<ul class="main-satellite-list">
+				<li class="main-satellite-list__item active"><i class="fas fa-times"></i>Отключен</li>
+				<li class="main-satellite-list__item"><img src="img/bing_map.png" alt="Режим спутника">Bing</li>
+				<li class="main-satellite-list__item"><img src="img/google_map.png" alt="Режим спутника">Google</li>
+			</ul>	
+
+		</div>
+
+		<div class="main-languages">
+
+			<div class="main-languages__cross">
 				<button id="close_satellite">&times;</button>
 			</div>
 
