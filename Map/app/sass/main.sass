@@ -273,7 +273,6 @@ button, button:active, button:hover
 		&.show-popup		
 			opacity: 1
 			visibility: visible
-  
 	&-feedback
 		background: #fff
 		position: relative
@@ -307,11 +306,6 @@ button, button:active, button:hover
 				height: 90px
 				padding: 5px 12px
 				resize: none
-		h2 
-			font-size: 17px
-			margin-bottom: 20px
-			border-bottom: $border
-			padding: 10px 0
 
 	&-satellite
 		position: absolute
@@ -326,24 +320,11 @@ button, button:active, button:hover
 		opacity: 0
 		padding: 20px 
 		transition: .25s
-		transform: translateY(-150%)
-		&__cross
-			position: absolute
-			top: -5px
-			right: 25px
-			font-size: 30px
-			button 
-				width: 5px
-				height: 2px
+		transform: translateY(-150%)	
 		&.show
 			transform: translateY(0)
 			opacity: 1
 			visibility: visible
-		h2 
-			font-size: 15px
-			margin-bottom: 13px
-			border-bottom: $border
-			padding: 10px 0	
 		&-list
 			&__item
 				display: flex
@@ -364,7 +345,57 @@ button, button:active, button:hover
 					font-size: 35px
 					margin-right: 15px
 					width: 30px		
-	
+
+	&-signs
+		position: absolute
+		z-index: 799
+		background: #fff
+		top: 50px
+		right: 52px
+		width: 250px
+		padding: 20px
+		text-align: center
+		border-radius: 4px
+		visibility: hidden
+		opacity: 0
+		transition: .25s
+		transform: translateY(-150%)
+		&.show
+			transform: translateY(0)
+			opacity: 1
+			visibility: visible
+
+	&-layers
+		position: absolute
+		z-index: 799
+		top: 50px
+		right: 52px
+		width: 350px
+		background: #fff 
+		padding: 20px
+		text-align: center
+		border-radius: 4px
+		visibility: hidden
+		opacity: 0
+		transition: .25s
+		transform: translateY(-150%)
+		&.show
+			transform: translateY(0)
+			opacity: 1
+			visibility: visible
+
+
+.cross
+	position: absolute
+	top: -5px
+	right: 10px
+	font-size: 30px
+.hdr
+	margin-top: 10px
+	font-size: 17px
+	margin-bottom: 20px
+	border-bottom: $border
+	padding: 10px 0	
 
 #close_message-map
 	margin-top: 5px
