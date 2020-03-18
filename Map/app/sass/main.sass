@@ -121,6 +121,15 @@ button, button:active, button:hover
 	bottom: 0
 	height: 110vh
 
+.btn-gray
+	background: #e4e4e4
+	margin-top: 25px
+	border-radius: 50px
+	padding: 4px 22px	
+	transition: .15s
+	&:hover
+		background: #cfcfcf
+
 .main
 	&-search
 		position: relative
@@ -229,7 +238,7 @@ button, button:active, button:hover
 			position: relative
 			margin-bottom: 35px
 			top: -15px
-			right: -8px
+			right: 0
 			button
 				position: absolute
 				top: 0
@@ -244,15 +253,7 @@ button, button:active, button:hover
 			&:last-of-type
 				margin-top: 7px
 			input
-				padding: 5px
-		&__btn
-			background: #eee
-			margin-top: 25px
-			border-radius: 50px
-			padding: 5px 22px	
-			transition: .15s
-			&:hover
-				background: #ddd
+				padding: 5px			
     
 	&-feedback__overlay
 		position: absolute
@@ -275,19 +276,21 @@ button, button:active, button:hover
 		position: relative
 		z-index: 801
 		width: 390px
-		height: 650px
+		height: 50px
 		border-radius: 4px
 		text-align: center
 		left: 50% 
 		transform: translateX(-50%)
-		visibility: hidden
 		opacity: 0
 		transition: .25s
+		padding-top: 5px
 		&.show-popup
 			opacity: 1
-			visibility: visible
+			height: 685px
+			.main-feedback__input
+				display: flex
 		&__input
-			display: flex
+			display: none
 			justify-content: center				
 			input 
 				display: block
