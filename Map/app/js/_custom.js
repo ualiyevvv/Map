@@ -147,7 +147,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 //------------------------------------------------------------
   $("#main-layers-list").accordion({
-    collapsible: true
+		collapsible: true,
+		active: false,
   });
 //--------------Всплывающее окно поиска-------------------
 	$('#open_search').on('input', function() {
