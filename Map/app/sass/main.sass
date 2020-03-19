@@ -63,6 +63,9 @@ button, button:active, button:hover
 	background: none
 	outline: none
 
+h1, h2, h3, h4, h5, h6, p	
+	margin: 0
+
 // PRELOADER STYLES
 
 .preloader
@@ -135,43 +138,83 @@ button, button:active, button:hover
 	overflow: hidden
 	&-search
 		position: relative
-		display: flex
 		z-index: 800
 		margin-top: 10px
 		margin-left: 10px
-		width: 300px
-		&__logo
-			width: 50px
-			height: 35px
+		width: 341px
+		&-container
 			display: flex
-			justify-content: center
+			&__logo
+				width: 50px
+				height: 35px
+				display: flex
+				justify-content: center
+				align-items: center
+				background: #ddd
+				border: $border
+				border-radius: 4px 0 0 4px
+				margin-right: -1px
+				img
+					max-width: 25px
+					max-height: 25px
+			input
+				padding: 5px 12px
+				border: $border
+				font-size: 14px
+				width: 260px
+			button
+				padding: 5px 10px
+				font-size: 14px
+				border: $border
+				transition: .15s
+				background: #eeeeee
+				border-radius: 0 4px 4px 0
+				margin-left: -4px
+				&:hover
+					background: #ddd
+	&-search-results
+		z-index: 799
+		background: #eee
+		border: $border
+		position: absolute
+		top: 34px
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		transform: translateY(-20%)
+		transition: .25s
+		&.active
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+		&__item
+			border-bottom: 1px solid #bbb
+			padding: 6px 10px
+			display: flex
 			align-items: center
-			background: #ddd
-			border: $border
-			border-radius: 4px 0 0 4px
-			margin-right: -1px
-			img
-				max-width: 25px
-				max-height: 25px
-		input
-			padding: 5px 12px
-			border: $border
-			font-size: 14px
-			width: 260px
-		button
-			padding: 5px 10px
-			font-size: 14px
-			border: $border
-			transition: .15s
-			background: #eeeeee
-			border-radius: 0 4px 4px 0
-			margin-left: -4px
+			justify-content: space-between
+			cursor: pointer
+			&:last-of-type
+				border: none
 			&:hover
-				background: #ddd	
+				background: #dadada
+			&:hover &_type h3
+				background: #68df72
+			&_name
+				h2
+					font-size: 14px
+				p
+					font-size: 13px
+			&_type
+				h3
+					font-size: 12px
+					background: #b1ffb8
+					padding: 3px 10px
+					border-radius: 50px										
 
 	&-controls
 		z-index: 800
-		position: absolute
+		position: fixed
 		a, button
 			&:hover
 				background: #eee

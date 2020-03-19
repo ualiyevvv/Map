@@ -33,15 +33,34 @@
 		<div id="map"></div>
 
 		<div class="main-search">
+			<div class="main-search-container">	
 
-			<div class="main-search__logo">
-				<img src="img/logo.png" alt="Герб Уральска">
-			</div>
+				<div class="main-search-container__logo">
+					<img src="img/logo.png" alt="Герб Уральска">
+				</div>
 
-			<input type="text" placeholder="Поиск">
+				<input id="open_search" type="text" placeholder="Поиск">
 
-			<button title="Поиск" type="submit"><i class="fas fa-search"></i></button>
+				<button title="Поиск" type="submit"><i class="fas fa-search"></i></button>		
+				
+				<ul class="main-search-results">
 
+					<li class="main-search-results__item">
+
+						<div class="main-search-results__item_name">
+							<h2>Заголовок</h2>
+							<p>Lorem ipsum dolor sit amet.</p>
+						</div>
+
+						<div class="main-search-results__item_type">
+							<h3>Улица</h3>
+						</div>
+
+					</li>
+					
+				</ul>
+
+			</div>	
 		</div>
 
 		<nav class="main-controls main-controls--horizontal">
@@ -202,7 +221,7 @@
 
 
 	<script src="js/scripts.min.js"></script>
-
+	
 
 </body>
 </html>

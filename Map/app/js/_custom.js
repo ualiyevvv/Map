@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-	
+
 	// PRELOADER CODE
 
 	// setTimeout(function() {
@@ -10,28 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	// },1000);
 
 	// ------------------------
-
-	// var mbAttr = ' <a href="#"></a>',
-	// 		mbUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-	// 		//mbUrl = 'http://{s}.google.com/vt/&key=AIzaSyAiQJ6AdIJaG0JMJ0mgYsY33mVs_JvkgmQ';
-
-	// var grayscale = L.tileLayer(mbUrl, {
-	// 	id: 'mapbox.light',
-	// 	attribution: mbAttr
-	// }),
-	// streets = L.tileLayer(mbUrl, {
-	// 	id: 'mapbox.streets',
-	// 	attribution: mbAttr
-	// });
-
-	// var map = L.map('map', {
-	// 	attribution: '&copy; <a href="http://osm.org/copyright">TOO "IT Group"</a> contributors',
-	// 	editable: true,
-	// 	drawControl: true,
-	// 	center: [51.222269, 51.401335],
-	// 	zoom: 11,
-	// 	layers: [streets]
-	// });
 
 	var center = [51.222269, 51.401335];
 	var mbUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -70,26 +48,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		tileSize: 512,
 		zoomOffset: -1,
 		accessToken: MBaccessToken
-	});
+	});	
 
 	var map = L.map('map', {
 		center: center,
 		zoom: 11,
-		layers: [streets,statllite]
+		layers: [streets,statllite],
 	});
 
 	L.marker(center).addTo(map);
-
-	// var baseMaps = {
-  //   "Streets": streets,
-  //   "Statllite": statllite,
-	// };
-
-	// var overlayMaps = {
-	// 	"Vector": editableLayers,
-	// };
-
-	// L.control.layers(baseMaps, overlayMaps).addTo(map);
 	
 //----печать
 	$('#print_map').click(function() {
@@ -174,4 +141,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('#main-layers').removeClass('show')
 		$('.active-btns').removeClass('active-btns')
 	});
+
+//--------------Всплывающее окно поиска-------------------
+	$('#open_search').on('input', function() {
+		if($(this).val() != '') {
+			$('.main-search-results').addClass('active');
+		}	else {
+			$('.main-search-results').removeClass('active');
+		}
+	});
+
+
 });
