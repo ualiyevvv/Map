@@ -354,7 +354,6 @@ button, button:active, button:hover
 		right: 52px
 		width: 250px
 		padding: 20px
-		text-align: center
 		border-radius: 4px
 		visibility: hidden
 		opacity: 0
@@ -364,6 +363,12 @@ button, button:active, button:hover
 			transform: translateY(0)
 			opacity: 1
 			visibility: visible
+		ul 
+			li
+				margin-bottom: 5px
+				border-bottom: $border
+				padding: 5px 0	
+
 
 	&-layers
 		position: absolute
@@ -389,7 +394,9 @@ button, button:active, button:hover
 	top: -5px
 	right: 10px
 	font-size: 30px
+
 .hdr
+	text-align: center
 	margin-top: 10px
 	font-size: 17px
 	margin-bottom: 20px
