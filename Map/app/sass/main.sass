@@ -498,6 +498,18 @@ h1, h2, h3, h4, h5, h6, p
 			opacity: 1
 			visibility: visible
 		&-list
+			&__range
+				overflow-y:hidden
+				align-items: center
+				display: flex
+				&_result
+					width: 35px
+				i 
+					margin-left: 10px
+				&_slider
+				
+					margin-right: 20px
+					width: 100%
 			&__item
 				padding: 5px
 				border-bottom: $border
@@ -513,7 +525,11 @@ h1, h2, h3, h4, h5, h6, p
 	justify-content: space-between
 	&-icon
 		display: none
-		
+
+.ui-state-active
+	border: $border
+	background: #555
+
 .cross
 	position: absolute
 	top: -5px
