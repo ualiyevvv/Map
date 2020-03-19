@@ -519,6 +519,40 @@ h1, h2, h3, h4, h5, h6, p
 					&.active
 						transform: rotate(180deg)
 
+	&-languages
+		position: absolute
+		z-index: 795
+		width: 250px
+		background: #fff
+		top: 50px
+		right: 52px
+		border-radius: 4px
+		padding: 20px
+		visibility: hidden
+		opacity: 0
+		transition: .25s
+		transform: translateY(-150%)
+		&.show
+			transform: translateY(0)
+			opacity: 1
+			visibility: visible
+		&-list 
+			&__item
+				display: flex
+				align-items: center
+				padding: 7px 10px
+				transition: .2s
+				cursor: pointer
+				&:hover
+					background: #eee
+				&.active
+					background: darken(#eee, 2%)
+				&:not(:last-of-type)
+					margin-bottom: 10px
+				img
+					width: 30px
+					margin-right: 15px
+				
 .ui-accordion-header
 	display: flex !important
 	align-items: center
