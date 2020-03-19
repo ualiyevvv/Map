@@ -366,7 +366,7 @@ button, button:active, button:hover
 		&-list 
 			&__item
 				border-bottom: 1px solid #ddd
-				padding: 7px 0
+				padding: 7px 0n
 				display: flex
 				align-items: center
 				&:last-of-type
@@ -445,7 +445,6 @@ button, button:active, button:hover
 		width: 350px
 		background: #fff 
 		padding: 20px
-		text-align: center
 		border-radius: 4px
 		visibility: hidden
 		opacity: 0
@@ -455,6 +454,21 @@ button, button:active, button:hover
 			transform: translateY(0)
 			opacity: 1
 			visibility: visible
+		&-list
+			&__item
+				padding: 5px
+				border-bottom: $border
+				&_arrow
+					padding: 5px
+					font-size: 17px
+					&.active
+						transform: rotate(180deg)
+.ui-accordion
+	&-header
+		text-align: left !important
+		display: flex !important
+		align-items: center !important
+		justify-content: space-between !important
 
 .cross
 	position: absolute
