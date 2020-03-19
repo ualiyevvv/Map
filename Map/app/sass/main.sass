@@ -352,7 +352,7 @@ button, button:active, button:hover
 		background: #fff
 		top: 50px
 		right: 52px
-		width: 250px
+		width: 300px
 		padding: 20px
 		border-radius: 4px
 		visibility: hidden
@@ -363,12 +363,79 @@ button, button:active, button:hover
 			transform: translateY(0)
 			opacity: 1
 			visibility: visible
-		ul 
-			li
-				margin-bottom: 5px
-				border-bottom: $border
-				padding: 5px 0	
-
+		&-list 
+			&__item
+				border-bottom: 1px solid #ddd
+				padding: 7px 0
+				display: flex
+				align-items: center
+				&:last-of-type
+					border: none
+				span
+					width: 23px
+					height: 23px
+					margin-right: 10px			
+				&_buildings
+					background: #db999a
+					box-shadow: inset 1px 1px 1px 1px #b57777	
+				&_process-buildings
+					background: #a67475
+					border: 2px solid #f8efba
+				&_broken-buildings
+					border: 2px dashed #f1c76b
+				&_streets
+					position: relative
+					span			
+						width: 3px
+						height: 100%
+						background: #aaa
+						position: absolute
+						top: 50%
+						margin-top: -50%
+						left: 50%	
+						margin-left: -1.5px
+						transform: rotate(45deg)
+				&_roads
+					background: #bbb
+				&_rails
+					position: relative
+					span			
+						width: 5px
+						height: 100%
+						background: #ffffff
+						border: 1px solid #000
+						position: absolute
+						top: 50%
+						margin-top: -50%
+						left: 50%	
+						margin-left: -2.5px
+						transform: rotate(45deg)
+						overflow: hidden
+						div
+							margin-left: -1px
+							border: 4px dotted #444
+							height: 100%
+				&_water
+					background: #7fe0fe
+					box-shadow: inset 1px 1px 1px 1px #2fa8d2
+				&_parks
+					background: #9cde7a
+					position: relative
+					span
+						position: absolute
+						width: 7px
+						height: 7px
+						top: 50%
+						margin-top: -3.5px
+						left: 50%
+						margin-left: -3.5px
+						border: 2px solid #4a8f2d
+						border-radius: 50%
+				&_villages
+					border: 2px dashed #d48e98
+				&_dachas
+					background: #d2ffbe
+					box-shadow: inset 1px 1px 1px 1px #5caf3b			
 
 	&-layers
 		position: absolute
