@@ -23,7 +23,8 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.4.1",
-		"jquery-ui-dist": "^1.12.1"
+		"jquery-ui-dist": "^1.12.1",
+		"leaflet-search": "^2.9.8"
 	},
 	"dependencies": {
 		"magnific-popup": "^1.1.0"
