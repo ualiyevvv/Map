@@ -141,7 +141,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('#main-layers').removeClass('show')
 		$('.active-btns').removeClass('active-btns')
 	});
-
+//---------------------------------------------------------
+	$('.main-layers-list__item').click(function(){
+		$(this).find('.main-layers-list__item_arrow').toggleClass('active');
+	});
+//------------------------------------------------------------
+  $("#main-layers-list").accordion({
+    collapsible: true
+  });
 //--------------Всплывающее окно поиска-------------------
 	$('#open_search').on('input', function() {
 		if($(this).val() != '') {
@@ -150,6 +157,5 @@ document.addEventListener("DOMContentLoaded", function() {
 			$('.main-search-results').removeClass('active');
 		}
 	});
-
 
 });
