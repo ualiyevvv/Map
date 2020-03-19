@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //---------------------------------------------------------
 	 $('.main-satellite-list__item').click(function() {
 		let current = $('.main-satellite-list__item.active');
+
 		current.removeClass('active');
 		$(this).addClass('active');
 	});
@@ -142,8 +143,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.active-btns').removeClass('active-btns')
 	});
 //---------------------------------------------------------
-	$('.main-layers-list__item').click(function(){
-		$(this).find('.main-layers-list__item_arrow').toggleClass('active');
+	$('.main-layers-list__item').click(function() {
+		let temp = $(this).find('.main-layers-list__item_arrow').hasClass('active');
+
+		$(".main-layers-list__item_arrow").removeClass('active');
+
+		if(!temp) {
+			$(this).find('.main-layers-list__item_arrow').addClass('active');
+		}
+
 	});
 //------------------------------------------------------------
   $("#main-layers-list").accordion({
@@ -158,15 +166,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			$('.main-search-results').removeClass('active');
 		}
 	});
-//--------------ползунок--------------------------
-	$("#polzunok").slider({
-		animate: "slow",
-		range: "min",    
-		value: 50,
-		slide : function(event, ui) {    
-			$("#result-polzunok").text(ui.value);        
-		}
+//---------------------Ползунок слоев----------------------
+	$('.main-layers-list__range_slider').on('input', function() {
+		$(this).parent().find('.main-layers-list__range_result').text($(this).val());
 	});
-	$( "#result-polzunok" ).text($( "#polzunok" ).slider( "value" )); 
-	$('#ui-id-2').css("height","auto")
+
+	$('.main-layers-list__range').css("height","auto");
+
 });
