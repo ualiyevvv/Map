@@ -170,6 +170,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.main-layers-list__range_slider').on('input', function() {
 		$(this).parent().find('.main-layers-list__range_result').text($(this).val());
 	});
+//----------------------------------------------------
+	$('.main-languages-list__item').click(function() {
+		let current = $('.main-languages-list__item.active');
+		current.removeClass('active');
+		$(this).addClass('active');
+		localStorage.setItem('language', $(this).data('language'));
+		$('#out_languages').text($(this).data('language').slice(0,3))
+
+	});
+
+	$('.main-languages-list__item').removeClass('active');
+
+	var language = localStorage.getItem('language') ?? 'Русский';
+
+	$('[data-language="' + language + '"]').addClass('active');
+	$('#out_languages').text(language.slice(0,3))
+//-----------------------------------------------------------
+	$('#open_languages').click(function(){
+		$('.show').removeClass('show')
+		$('#main-languages').addClass('show')
+	});
+
+	$('#close_languages').click(function(){
+		$('#main-languages').removeClass('show')
+		$('.active-btns').removeClass('active-btns')
+	});
 
 	$('.main-layers-list__range').css("height","auto");
 
