@@ -218,7 +218,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	$('#close_panel').click(function(){
-		$('#main_panel').removeClass('show-menu')
+		$('#main-panel').removeClass('show-menu')
+	});
+//-------------------------------------------------------------
+	$('#open_auth').click(function(){
+		$('.auth').addClass('show-auth')
 	});
 
+	$('#close_auth').click(function(){
+		$('.auth').removeClass('show-auth')
+	});	
 });
