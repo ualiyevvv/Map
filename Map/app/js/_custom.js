@@ -168,16 +168,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 //---------------------Ползунок слоев----------------------
 	$('.main-layers-list__range_slider').on('input', function() {
-		$(this).parent().find('.main-layers-list__range_result').text($(this).val());
+		$(this).parent().find('.main-layers-list__range_result').text($(this).val());	
 	});
 //----------------------------------------------------
 	$('.main-languages-list__item').click(function() {
 		let current = $('.main-languages-list__item.active');
+
 		current.removeClass('active');
 		$(this).addClass('active');
-		localStorage.setItem('language', $(this).data('language'));
-		$('#out_languages').text($(this).data('language').slice(0,3))
 
+		localStorage.setItem('language', $(this).data('language'));
+
+		$('#out_languages').text($(this).data('language').slice(0,3))
 	});
 
 	$('.main-languages-list__item').removeClass('active');
@@ -198,5 +200,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	$('.main-layers-list__range').css("height","auto");
+
+//-----------------------Табы авторизации----------------------
+$('.auth-container-tabs__btn').on('click', function() {
+	var tabName = $(this).data('tab'),
+		 tab = $('.auth-container-box[data-tab="'+tabName+'"]');
+	
+	$('.auth-container-tabs__btn.active').removeClass('active');
+	$(this).addClass('active');
+	
+	$('.auth-container-box.active').removeClass('active');
+	tab.addClass('active');
+});
 
 });

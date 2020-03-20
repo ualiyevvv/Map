@@ -55,15 +55,16 @@ ul
 	margin: 0	
 	padding: 0
 
-input
+input, input:focus
 	border: none
+	outline: none
 
-button, button:active, button:hover
+button, button:active, button:hover, button:focus
 	border: none
 	background: none
 	outline: none
 
-h1, h2, h3, h4, h5, h6, p	
+h1, h2, h3, h4, h5, h6, p, label
 	margin: 0
 
 // PRELOADER STYLES
@@ -123,6 +124,106 @@ h1, h2, h3, h4, h5, h6, p
 	right: 0
 	bottom: 0
 	height: 110vh
+
+.auth-overlay
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background: rgba(#ccc, .7)
+	z-index: 900
+
+.auth-container
+	z-index: 901
+	background: #fff
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 550px
+	transform: translate(-50%,-50%)
+	box-shadow: 0 0 10px 1px #aaa
+	&-tabs
+		display: flex
+		&__btn
+			width: 50%
+			padding: 15px 0
+			background: #d8d6d6
+			transition: .2s
+			font-size: 17px
+			text-transform: uppercase
+			color: #555555
+			&:hover
+				background: #ccc
+			&.active
+				background: #fff
+				color: #000000
+	&-box
+		padding-bottom: 30px
+		display: none
+		&.active
+			display: block
+		h2
+			font-size: 16px
+			text-align: center
+			color: #333
+			font-weight: 400
+			margin: 15px 0 25px
+		&-inputs
+			margin-bottom: 20px		
+			&__item
+				padding: 10px 20px
+				border-top: 1px solid #ccc 
+				label
+					color: #000
+					margin-bottom: 3px
+				input
+					width: 100%
+					border-bottom: 1px solid transparent	
+					&:focus
+						border-bottom: 1px dashed #ff7d7d	
+						background: #f7f7f7
+				&:not(:first-of-type)
+					margin-top: -1px
+					border-bottom: 1px solid #ccc
+			&__item_passwords
+				display: flex
+				div
+					width: 50%
+					&:last-of-type
+						border-left: 1px solid #ccc
+						padding-left: 20px
+					&:first-of-type
+						padding-right: 20px	
+		&-controls
+			display: flex
+			padding: 0 20px	
+			align-items: center		
+			&__item
+				width: 50%
+				line-height: 20px
+			a
+				color: #777
+				text-align: center
+				transition: .2s
+				&:hover
+					color: #000000
+
+.btn-green
+	background: #4caf50
+	transition: .2s
+	color: #ffffff
+	padding: 10px 15px
+	&:hover
+		background: lighten(#4caf50, 10%)
+
+.btn-blue
+	background: #1d8ecf
+	transition: .2s
+	color: #ffffff
+	padding: 10px 15px
+	&:hover
+		background: lighten(#1d8ecf, 10%)
 
 .btn-gray
 	background: #e4e4e4
