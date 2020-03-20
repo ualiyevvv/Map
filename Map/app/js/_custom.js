@@ -214,13 +214,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 //------------------------------------------------------------
 	$('#open_panel').click(function(){
-		$('.show').removeClass('show')
-		$('#main-panel').addClass('show')
+		$('#main-panel').addClass('show-menu');
 	});
 
-	$('#close_languages').click(function(){
-		$('#main-languages').removeClass('show')
-		$('.active-btns').removeClass('active-btns')
+	$('#close_panel').click(function(){
+		$('#main_panel').removeClass('show-menu')
 	});
 
 });
