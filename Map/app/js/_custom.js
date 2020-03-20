@@ -202,15 +202,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.main-layers-list__range').css("height","auto");
 
 //-----------------------Табы авторизации----------------------
-$('.auth-container-tabs__btn').on('click', function() {
-	var tabName = $(this).data('tab'),
-		 tab = $('.auth-container-box[data-tab="'+tabName+'"]');
-	
-	$('.auth-container-tabs__btn.active').removeClass('active');
-	$(this).addClass('active');
-	
-	$('.auth-container-box.active').removeClass('active');
-	tab.addClass('active');
-});
+	$('.auth-container-tabs__btn').on('click', function() {
+		var tabName = $(this).data('tab'),
+			tab = $('.auth-container-box[data-tab="'+tabName+'"]');
+		
+		$('.auth-container-tabs__btn.active').removeClass('active');
+		$(this).addClass('active');
+		
+		$('.auth-container-box.active').removeClass('active');
+		tab.addClass('active');
+	});
+//------------------------------------------------------------
+	$('#open_panel').click(function(){
+		$('.show').removeClass('show')
+		$('#main-panel').addClass('show')
+	});
+
+	$('#close_languages').click(function(){
+		$('#main-languages').removeClass('show')
+		$('.active-btns').removeClass('active-btns')
+	});
 
 });
