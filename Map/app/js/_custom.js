@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		attribution: '&copy; <a href="http://osm.org/copyright">TOO "IT Group"</a>'
 	});
 
-	var mapboxUrl_2 = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
+	var mapboxUrl_1 = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
 
-	var mapboxUrl_1 = 'https://api.mapbox.com/styles/v1/xchjjvg/ck7uc3ulg485a1irylexz4vag.html?fresh=true&title=view&access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
+	//var mapboxUrl_1 = 'https://api.mapbox.com/styles/v1/xchjjvg/ck7uc3ulg485a1irylexz4vag.html?fresh=true&title=view&access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
 
 	var MBaccessToken = 'pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg';
 
@@ -86,6 +86,70 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	L.marker(center).addTo(map);
 	
+
+
+
+	
+var editableLayers = new L.FeatureGroup();
+map.addLayer(editableLayers);
+
+var drawPluginOptions = {
+  position: 'topleft',
+  
+  draw: {
+    
+    polygon: {
+      shapeOptions: {
+        color: '#97009c'
+      },
+      allowIntersection: false, // Restricts shapes to simple polygons
+      drawError: {
+        color: '#e1e100', // Color the shape will turn when intersects
+        message: '<strong>Oh snap!<strong> you can\'t draw that!' // Message that will show when intersect
+      },
+      
+    },
+    
+    },
+  edit: {
+    featureGroup: editableLayers, //REQUIRED!!
+    remove: true,
+  }
+};
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw(drawPluginOptions);
+map.addControl(drawControl);
+
+
+
+map.on('draw:created', function(e) {
+  var type = e.layerType,
+    layer = e.layer;
+
+  if (type === 'marker') {
+    layer.bindPopup('A popup!');
+  }
+
+  editableLayers.addLayer(layer);
+
+  var geojson = editableLayers.toGeoJSON();
+  console.log(geojson)
+});
+
+
+
+map.on('draw:edited', function (e) {
+			var layers = e.layers;
+			var countOfEditedLayers = 0;
+			layers.eachLayer(function(layer) {
+				countOfEditedLayers++;
+			});
+			console.log("Edited " + countOfEditedLayers + " layers");
+		});
+
+
+
 //----печать
 	$('#print_map').click(function() {
 		print();
