@@ -170,6 +170,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.main-layers-list__range_slider').on('input', function() {
 		$(this).parent().find('.main-layers-list__range_result').text($(this).val());	
 	});
+//-------------------Чекбокс слоев--------------------
+	$('#plan').change(function() {
+		if($(this).checked) {
+			$('.plan2').checked;
+		}
+	});
 //----------------------------------------------------
 	$('.main-languages-list__item').click(function() {
 		let current = $('.main-languages-list__item.active');
@@ -228,4 +234,5 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('#close_auth').click(function(){
 		$('.auth').removeClass('show-auth')
 	});	
+
 });
