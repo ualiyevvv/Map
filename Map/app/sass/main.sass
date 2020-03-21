@@ -267,6 +267,19 @@ h1, h2, h3, h4, h5, h6, p, label
 .main
 	height: 100vh
 	overflow: hidden
+	&-auth
+		position: absolute 
+		top: 0px
+		left: 350px
+		border-radius: 4px
+		background: #ffffff
+		width: 35px
+		height: 35px
+		border: $border
+		font-size: 17px
+		&:hover
+			background: #eeeeee
+			border: $border
 	&-search
 		position: relative
 		z-index: 800
@@ -378,7 +391,6 @@ h1, h2, h3, h4, h5, h6, p, label
 			background: #333
 			text-align: center
 			border-radius: 0 50px 50px 0
-			border: $border  
 			font-size: 20px 
 			i
 				transform: translate(-2px,-1px)
@@ -400,6 +412,7 @@ h1, h2, h3, h4, h5, h6, p, label
 				border-radius: 0 4px 4px 0
 				width: 40px
 				color: #555
+			
 	&-controls--vertical
 		right: 9px
 		top: 168px
