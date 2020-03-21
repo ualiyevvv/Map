@@ -72,7 +72,11 @@
 }
 
 .leaflet-right .leaflet-draw-actions {
+<<<<<<< HEAD
 	right: 26px;
+=======
+	right: 15px;
+>>>>>>> upstream/master
 	left: auto;
 }
 

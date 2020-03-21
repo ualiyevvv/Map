@@ -47,7 +47,6 @@ body
 // CUSTOM STANDARD
 
 a, a:active, a:focus, a:hover, a:visited
-	color: #fff
 	text-decoration: none
 
 ul
@@ -267,19 +266,6 @@ h1, h2, h3, h4, h5, h6, p, label
 .main
 	height: 100vh
 	overflow: hidden
-	&-auth
-		position: absolute 
-		top: 0px
-		left: 350px
-		border-radius: 4px
-		background: #ffffff
-		width: 35px
-		height: 35px
-		border: $border
-		font-size: 17px
-		&:hover
-			background: #eeeeee
-			border: $border
 	&-search
 		position: relative
 		z-index: 800
@@ -288,6 +274,7 @@ h1, h2, h3, h4, h5, h6, p, label
 		width: 341px
 		&-container
 			display: flex
+			position: relative
 			&__logo
 				width: 50px
 				height: 35px
@@ -316,6 +303,23 @@ h1, h2, h3, h4, h5, h6, p, label
 				margin-left: -4px
 				&:hover
 					background: #ddd
+			.main-auth
+				position: absolute
+				top: 0
+				right: -90px
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 4px
+				background: #ffffff
+				font-size: 14px
+				height: 35px
+				border: $border
+				i
+					margin-right: 5px
+				&:hover
+					background: #eeeeee
+					border: $border			
 	&-search-results
 		z-index: 799
 		background: #eee
@@ -354,7 +358,7 @@ h1, h2, h3, h4, h5, h6, p, label
 					font-size: 12px
 					background: #b1ffb8
 					padding: 3px 10px
-					border-radius: 50px														
+					border-radius: 50px																
 	&-panel
 		position: absolute
 		z-index: 501
@@ -811,6 +815,9 @@ h1, h2, h3, h4, h5, h6, p, label
 	padding-left: 1px
 
 .leaflet-right
+	top: 49%
+
+.leaflet-control-attribution
 	display: none	
 
 .leaflet-bar
