@@ -125,6 +125,14 @@ h1, h2, h3, h4, h5, h6, p, label
 	bottom: 0
 	height: 110vh
 
+.auth
+	opacity: 0
+	visibility: hidden
+	transition: .25s
+	&.show-auth
+		opacity: 1
+		visibility: visible
+
 .auth-overlay
 	position: fixed
 	top: 0
@@ -133,6 +141,7 @@ h1, h2, h3, h4, h5, h6, p, label
 	bottom: 0
 	background: rgba(#ccc, .7)
 	z-index: 900
+	
 
 .auth-container
 	z-index: 901
@@ -145,6 +154,27 @@ h1, h2, h3, h4, h5, h6, p, label
 	box-shadow: 0 0 10px 1px #aaa
 	&-tabs
 		display: flex
+		span 
+			align-items: center
+			display: flex
+			justify-content: center
+			background: #fff
+			box-shadow: 0 0 15px 1px #aaa
+			color: #777676
+			border-radius: 50%
+			position: absolute
+			top: -80px
+			left: 50%
+			transform: translateX(-50%)
+			width: 40px
+			height: 40px
+			font-size: 30px
+			cursor: pointer
+			transition: .2s
+			&:hover
+				background: #e7e2e2
+				color: #555
+				
 		&__btn
 			width: 50%
 			padding: 15px 0
@@ -320,7 +350,7 @@ h1, h2, h3, h4, h5, h6, p, label
 		border-radius: 0 4px 4px 0
 		width: 400px
 		padding: 20px
-		height: 100vh
+		height: 80vh
 		opacity: 0
 		visibility: hidden
 		transform: translateX(-220%)

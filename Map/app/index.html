@@ -29,16 +29,17 @@
 		</div>
 	</div>	 -->
 
-<!-- <div class="auth-overlay"></div>
+<div class="auth-overlay auth"></div>
 
-<div class="auth-container">
+<div class="auth-container auth">
 
 	<div class="auth-container-tabs">
+		<span id="close_auth"><i class="far fa-times"></i></span>
 		<button class="auth-container-tabs__btn active" data-tab="1">Войти</button>
 		<button class="auth-container-tabs__btn" data-tab="2">Регистрация</button>
 	</div>
 
-	<div class="auth-container-box" data-tab="1">
+	<div class="auth-container-box active" data-tab="1">
 
 		<h2>Введите данные для входа</h2>
 
@@ -97,7 +98,7 @@
 
 	</div>
 
-</div> -->
+</div>
 
 	<main  class="main">
 		<div id="map"></div>
@@ -135,9 +136,15 @@
 
 		<nav class="main-controls main-controls--left" > 
 			<button id="open_panel"><i class="fas fa-bars"></i></button>
+			<button id="open_auth"><i class="fas fa-sign-in-alt"></i></button>
 		</nav>
 
 		<div class="main-panel" id="main-panel">
+
+			<div class="cross" >
+				<button id="close_panel">&times;</button>
+			</div>
+
 			<h2 class="hdr">Обьекты</h2>
 		</div>
 
