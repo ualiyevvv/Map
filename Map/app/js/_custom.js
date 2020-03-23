@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
     return this;
   };
 
-<<<<<<< HEAD
 // перевод рисовалки на русский язык
   const drawToolbar = {
 	actions: {
@@ -159,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function() {
   //----перевод закончился----
 
 
-=======
 	// перевод рисовалки на русский язык
   const drawToolbar = {
 		actions: {
@@ -277,7 +275,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 	//----перевод закончился----
 	
->>>>>>> upstream/master
 	var center = [51.222269, 51.401335];
 	var mbUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 	// var mbUrl = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
