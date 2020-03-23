@@ -11,6 +11,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ------------------------
 
+	// jquery toggle whole attribute
+  $.fn.toggleAttr = function(attr, val) {
+    var test = $(this).attr(attr);
+    if ( test ) { 
+      // if attrib exists with ANY value, still remove it
+      $(this).removeAttr(attr);
+    } else {
+      $(this).attr(attr, val);
+    }
+    return this;
+  };
+
+  // jquery toggle just the attribute value
+  $.fn.toggleAttrVal = function(attr, val1, val2) {
+    var test = $(this).attr(attr);
+    if ( test === val1) {
+      $(this).attr(attr, val2);
+      return this;
+    }
+    if ( test === val2) {
+      $(this).attr(attr, val1);
+      return this;
+    }
+    // default to val1 if neither
+    $(this).attr(attr, val1);
+    return this;
+  };
+
 	// перевод рисовалки на русский язык
   const drawToolbar = {
 		actions: {
@@ -415,8 +443,8 @@ map.on('draw:edited', function (e) {
 		}
 	});
 //---------------------Ползунок слоев----------------------
-	$('.main-layers-list__range_slider').on('input', function() {
-		$(this).parent().find('.main-layers-list__range_result').text($(this).val());	
+	$('.main-layers-list-box__range_slider').on('input', function() {
+		$(this).parent().find('.main-layers-list-box__range_result').text($(this).val());	
 	});
 //----------------------------------------------------
 	$('.main-languages-list__item').click(function() {
@@ -461,9 +489,9 @@ map.on('draw:edited', function (e) {
 		tab.addClass('active');
 	});
 //------------------------------------------------------------
-	// $('#open_panel').click(function(){
-	// 	$('#main-panel').addClass('show-menu');
-	// });
+	$('#open_panel').click(function(){
+		$('#main-panel').addClass('show-menu');
+	});
 
 	$(document).keydown(function(e) {
 		e.preventDefault;
@@ -484,4 +512,17 @@ map.on('draw:edited', function (e) {
 	$('#close_auth').click(function(){
 		$('.auth').removeClass('show-auth')
 	});	
+
+	$('#phone').mask('+7 999 999 99 99');
+
+	$('.layers-checkbox').click(function() {
+		$('[data-range="'+ $(this).data('checkbox') +'"]').toggleClass('active').find('.main-layers-list-box__range_slider').toggleAttr('disabled','disabled');
+	});
+
+	$('.main-panel-container__box_header').click(function() {
+		$(this).toggleClass('show');
+		$(this).parent().find('.main-panel-container__box-list').slideToggle('fast');
+		$(this).find('.fas.fa-sort-down').toggleClass('active');
+	});
+
 });

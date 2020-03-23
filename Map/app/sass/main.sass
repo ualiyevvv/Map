@@ -9,6 +9,17 @@
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+	appearance: none
+	width: 7px
+	background: #ffffff
+	border: 1px solid #ccc
+::-webkit-scrollbar-thumb
+	appearance: none
+	width: 7px
+	height: 7px
+	background: #bbb	
+
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -197,7 +208,15 @@ h1, h2, h3, h4, h5, h6, p, label
 			text-align: center
 			color: #333
 			font-weight: 400
-			margin: 15px 0 25px
+			margin-top: 15px
+			margin-bottom: 25px
+		h3
+			text-align: center
+			font-weight: 400
+			font-size: 16px
+			color: #999
+			margin-bottom: 25px
+			margin-top: -15px
 		&-inputs
 			margin-bottom: 20px		
 			&__item
@@ -368,15 +387,64 @@ h1, h2, h3, h4, h5, h6, p, label
 		width: 400px
 		padding: 20px
 		height: 80vh
-		opacity: 0
-		visibility: hidden
-		transform: translateX(-220%)
-		transition: .25s
+		transform: translateX(-100%)
+		transition: .22s
+		overflow: hidden
+		.cross
+			margin-right: 4px
 		&.show-menu
 			transform: translateX(0)
-			visibility: visible
-			opacity: 1
-
+		&__search
+			margin-top: 35px
+			display: flex
+			justify-content: space-between
+			align-items: center	
+			border-bottom: $border
+			&:focus-within
+				border-bottom: 1px dashed red
+			input
+				width: 100%
+		&-container
+			overflow-y: scroll
+			height: 87%
+			margin-top: 15px	
+			&__box
+				margin-right: 5px
+				&_header
+					font-size: 15px
+					display: flex
+					align-items: center
+					padding: 3px 6px
+					transition: .1s
+					&.show
+						background: #eee
+					i
+						height: 25px
+						margin-right: 10px
+						font-size: 18px					
+						&.active
+							transform: rotate(180deg)
+							color: #888		
+				&-list
+					display: none						
+					&__item
+						display: flex
+						align-items: center
+						border-bottom: 1px solid #eee
+						padding: 7px 10px
+						font-size: 15px
+						margin: 7px 10px
+						cursor: pointer
+						transition: .2s
+						&:last-of-type
+							border: none
+						&:hover
+							background: #e4e4e4	
+						img
+							width: 22px	
+							height: 22px
+							margin-right: 10px	
+	
 	&-controls
 		z-index: 500
 		position: fixed		            

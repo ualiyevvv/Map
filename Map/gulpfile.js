@@ -50,6 +50,7 @@ gulp.task('scripts', function() {
 		'app/libs/leaflet/leaflet.draw.js', 
 >>>>>>> upstream/master
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Popup Library
+		'app/libs/jquery.maskedinput.js',
 		'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
