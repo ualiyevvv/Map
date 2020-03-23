@@ -82,20 +82,20 @@
 			</div>
 
 			<div class="auth-container-box-inputs__item">
-				<label for="email">Email *</label><br>
-				<input name="email" type="email" placeholder="Введите почту">
+				<label for="phone">Телефон *</label><br>
+				<input id="phone" name="phone" type="text" placeholder="Введите номер телефона">
 			</div>
 	
 			<div class="auth-container-box-inputs__item auth-container-box-inputs__item_passwords">
 
 				<div>
-					<label for="email">Пароль *</label><br>
-					<input type="password" placeholder="Введите пароль">
+					<label for="password">Пароль *</label><br>
+					<input name="password" type="password" placeholder="Введите пароль">
 				</div>
 
 				<div>
-					<label for="email">Проверка пароля *</label><br>
-					<input type="password" placeholder="Повторите пароль">
+					<label for="password_repeat">Проверка пароля *</label><br>
+					<input type="password_repeat" placeholder="Повторите пароль">
 				</div>	
 
 			</div>
@@ -317,10 +317,10 @@
 				<div class="main-layers-list-box">
 
 					<div class="main-layers-list-box__header">
-						<input class="plan2" type="checkbox" id="electric-webs" data-checkbox="electric-webs"><label for="electric-webs">Электрические сети</label>
+						<input class="layers-checkbox" type="checkbox" data-checkbox="electric-webs"><label for="electric-webs">Электрические сети</label>
 					</div>
 
-					<div class="main-layers-list-box__range" data-govno="electric-webs">
+					<div class="main-layers-list-box__range" data-range="electric-webs">
 						
 						<input class="main-layers-list-box__range_slider" disabled type="range" min="0" max="100" value="100">
 	
@@ -331,12 +331,12 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input class="plan2" type="checkbox"><label>Электрические сети</label>
+						<input class="layers-checkbox" type="checkbox" data-checkbox="electric-webs2"><label>Электрические сети</label>
 					</div>
 
-					<div class="main-layers-list-box__range">
+					<div class="main-layers-list-box__range" data-range="electric-webs2">
 						
-						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+						<input class="main-layers-list-box__range_slider" disabled type="range" min="0" max="100" value="100">
 	
 						<span class="main-layers-list-box__range_result">100</span>
 	
