@@ -150,7 +150,7 @@
 /* ================================================================== */
 
 .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
-	background-position: -2px -2px;
+	background-position: 2px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
@@ -158,7 +158,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
-	background-position: -31px -2px;
+	background-position: -27px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
@@ -166,7 +166,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
-	background-position: -62px -2px;
+	background-position: -57px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
@@ -174,7 +174,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-circle {
-	background-position: -92px -2px;
+	background-position: -87px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-circle {
@@ -182,7 +182,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-marker {
-	background-position: -122px -2px;
+	background-position: -117px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-marker {
@@ -190,7 +190,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-circlemarker {
-	background-position: -273px -2px;
+	background-position: -267px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-circlemarker {
@@ -202,7 +202,7 @@
 /* ================================================================== */
 
 .leaflet-draw-toolbar .leaflet-draw-edit-edit {
-	background-position: -152px -2px;
+	background-position: -147px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-edit {
@@ -210,7 +210,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-remove {
-	background-position: -182px -2px;
+    background-position: -177px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-remove {
@@ -218,7 +218,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-edit.leaflet-disabled {
-	background-position: -212px -2px;
+	background-position: -207px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-edit.leaflet-disabled {
@@ -226,7 +226,7 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-remove.leaflet-disabled {
-	background-position: -242px -2px;
+	background-position: -237px 2px;
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-remove.leaflet-disabled {
