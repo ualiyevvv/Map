@@ -186,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var map = L.map('map', {
 		center: center,
 		zoom: 11,
+		layers:[streets]
 	});
 
 	L.marker(center).addTo(map);
