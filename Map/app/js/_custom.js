@@ -166,27 +166,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		attribution: '&copy; <a href="http://osm.org/copyright">TOO "IT Group"</a>'
 	});
 
-	var mapboxUrl_1 = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
+	var mapboxUrl = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
 
 	//var mapboxUrl_1 = 'https://api.mapbox.com/styles/v1/xchjjvg/ck7uc3ulg485a1irylexz4vag.html?fresh=true&title=view&access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
 
 	var MBaccessToken = 'pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg';
 
-	//---------смена спутника----------
-	$('.main-satellite-list__item').click(function() {
-		localStorage.setItem('mapboxUrl', $(this).data('mapbox'));
-		location.reload();
-	});
-
-	var mapboxUrl = localStorage.getItem('mapboxUrl') ?? mapboxUrl_1; 
 	
-	$('.main-satellite-list__item').removeClass('active');
-
-	var mapbox = localStorage.getItem('mapboxUrl') ?? mapboxUrl_1;
-
-	$('[data-mapbox="' + mapbox + '"]').addClass('active');
-
-	//----------------------------------
 
 	var statllite = L.tileLayer(mapboxUrl, {
 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -200,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	var map = L.map('map', {
 		center: center,
 		zoom: 11,
-		layers: [streets,statllite],
 	});
 
 	L.marker(center).addTo(map);
@@ -276,7 +261,28 @@ map.on('draw:edited', function (e) {
   			console.log(geojson)
 		});
 
+//---------смена спутника----------
 
+	$('.street').click(function() {
+		if (map.hasLayer(streets)) {
+			map.removeLayer(streets)
+			map.addLayer(streets);
+		}
+		else{
+			map.addLayer(streets);
+		} ;
+	});
+	$('.statllite').click(function() {
+		if (map.hasLayer(statllite)){
+			map.removeLayer(statllite),
+			map.addLayer(statllite);
+		}
+		else {
+			map.addLayer(statllite);
+		} ;
+	});
+
+//----------------------------------
 
 //----печать
 	$('#print_map').click(function() {
