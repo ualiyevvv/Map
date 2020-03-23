@@ -72,7 +72,11 @@
 }
 
 .leaflet-right .leaflet-draw-actions {
+<<<<<<< HEAD
 	right: 26px;
+=======
+	right: 15px;
+>>>>>>> upstream/master
 	left: auto;
 }
 
@@ -150,7 +154,11 @@
 /* ================================================================== */
 
 .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
+<<<<<<< HEAD
 	background-position: -2px -2px;
+=======
+	background-position: 2px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polyline {
@@ -158,7 +166,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+<<<<<<< HEAD
 	background-position: -31px -2px;
+=======
+	background-position: -27px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-polygon {
@@ -166,7 +178,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
+<<<<<<< HEAD
 	background-position: -62px -2px;
+=======
+	background-position: -57px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
@@ -174,7 +190,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-circle {
+<<<<<<< HEAD
 	background-position: -92px -2px;
+=======
+	background-position: -87px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-circle {
@@ -182,7 +202,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-marker {
+<<<<<<< HEAD
 	background-position: -122px -2px;
+=======
+	background-position: -117px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-marker {
@@ -190,7 +214,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-draw-circlemarker {
+<<<<<<< HEAD
 	background-position: -273px -2px;
+=======
+	background-position: -267px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-draw-circlemarker {
@@ -202,7 +230,11 @@
 /* ================================================================== */
 
 .leaflet-draw-toolbar .leaflet-draw-edit-edit {
+<<<<<<< HEAD
 	background-position: -152px -2px;
+=======
+	background-position: -147px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-edit {
@@ -210,7 +242,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-remove {
+<<<<<<< HEAD
 	background-position: -182px -2px;
+=======
+    background-position: -177px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-remove {
@@ -218,7 +254,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-edit.leaflet-disabled {
+<<<<<<< HEAD
 	background-position: -212px -2px;
+=======
+	background-position: -207px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-edit.leaflet-disabled {
@@ -226,7 +266,11 @@
 }
 
 .leaflet-draw-toolbar .leaflet-draw-edit-remove.leaflet-disabled {
+<<<<<<< HEAD
 	background-position: -242px -2px;
+=======
+	background-position: -237px 2px;
+>>>>>>> upstream/master
 }
 
 .leaflet-touch .leaflet-draw-toolbar .leaflet-draw-edit-remove.leaflet-disabled {
