@@ -65,25 +65,36 @@
 
 	<div class="auth-container-box" data-tab="2">
 
-		<h2>Введите данные для регистрации</h2>
+		<h2>Регистрация предназначена для сотрудников акимата</h2>
+		<h3>Аккаунт будет активирован только после проверки</h3>
 
 		<div class="auth-container-box-inputs">
+
+			<div class="auth-container-box-inputs__item">
+				<label for="name">Ф.И.О *</label><br>
+				<input name="name" type="email" placeholder="Введите ваше имя">
+			</div>
 
 			<div class="auth-container-box-inputs__item">
 				<label for="email">Email *</label><br>
 				<input name="email" type="email" placeholder="Введите почту">
 			</div>
+
+			<div class="auth-container-box-inputs__item">
+				<label for="phone">Телефон *</label><br>
+				<input id="phone" name="phone" type="text" placeholder="Введите номер телефона">
+			</div>
 	
 			<div class="auth-container-box-inputs__item auth-container-box-inputs__item_passwords">
 
 				<div>
-					<label for="email">Пароль *</label><br>
-					<input type="password" placeholder="Введите пароль">
+					<label for="password">Пароль *</label><br>
+					<input name="password" type="password" placeholder="Введите пароль">
 				</div>
 
 				<div>
-					<label for="email">Проверка пароля *</label><br>
-					<input type="password" placeholder="Повторите пароль">
+					<label for="password_repeat">Проверка пароля *</label><br>
+					<input type="password_repeat" placeholder="Повторите пароль">
 				</div>	
 
 			</div>
@@ -130,25 +141,89 @@
 					
 				</ul>
 
+				<button class="main-auth" id="open_auth"><i class="fas fa-key"></i>Войти</button>
+
 			</div>	
+			
 		</div>
 
 		<nav class="main-controls main-controls--left" > 
 			<button id="open_panel"><i class="fas fa-bars"></i></button>
-			<button id="open_auth"><i class="fas fa-sign-in-alt"></i></button>
 		</nav>
 
-		<div class="main-panel" id="main-panel">
+		<div class="main-panel show-menu" id="main-panel">
 
-			<div class="cross" >
+			<div class="cross">
 				<button id="close_panel">&times;</button>
 			</div>
 
-			<h2 class="hdr">Обьекты</h2>
+			<div class="main-panel__search">
+				<input type="text" placeholder="Поиск"><i class="fas fa-search"></i>
+			</div>
+
+			<div class="main-panel-container">
+
+				<div class="main-panel-container__box">
+
+					<h3 class="main-panel-container__box_header"><i class="fas fa-sort-down"></i>Ивенстиционные площадки</h3>
+	
+					<ul class="main-panel-container__box-list">
+	
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+		
+					</ul>
+
+				</div>
+
+				<div class="main-panel-container__box">
+
+					<h3 class="main-panel-container__box_header"><i class="fas fa-sort-down"></i>Ивенстиционные площадки</h3>
+	
+					<ul class="main-panel-container__box-list">
+	
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+		
+					</ul>
+
+				</div>
+
+				<div class="main-panel-container__box">
+
+					<h3 class="main-panel-container__box_header"><i class="fas fa-sort-down"></i>Ивенстиционные площадки</h3>
+	
+					<ul class="main-panel-container__box-list">
+	
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+		
+					</ul>
+
+				</div>
+
+				<div class="main-panel-container__box">
+
+					<h3 class="main-panel-container__box_header"><i class="fas fa-sort-down"></i>Ивенстиционные площадки</h3>
+	
+					<ul class="main-panel-container__box-list">
+	
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+		
+					</ul>
+
+				</div>
+
+			</div>
+
 		</div>
 
 		<nav class="main-controls main-controls--horizontal">
-
 			<button class="main-controls__btn" title="Меню" id="open_layers"><i class="fas fa-layer-group"></i></button> 
 			<button class="main-controls__btn" title="Условные знаки" id="open_signs"><i class="fas fa-info-circle"></i></button>
 			<button class="main-controls__btn" title="Режим" id="open_satellites"><i class="fas fa-map-marker-alt"></i></button> 
@@ -288,6 +363,8 @@
 			
 		</div>
 
+		
+
 		<div class="main-layers" id="main-layers">
 
 			<div class="cross">
@@ -304,10 +381,10 @@
 				<div class="main-layers-list-box">
 
 					<div class="main-layers-list-box__header">
-						<input class="plan2" type="checkbox" id="electric-webs" data-checkbox="electric-webs"><label for="electric-webs">Электрические сети</label>
+						<input class="layers-checkbox" type="checkbox" data-checkbox="electric-webs"><label for="electric-webs">Электрические сети</label>
 					</div>
 
-					<div class="main-layers-list-box__range" data-govno="electric-webs">
+					<div class="main-layers-list-box__range" data-range="electric-webs">
 						
 						<input class="main-layers-list-box__range_slider" disabled type="range" min="0" max="100" value="100">
 	
@@ -318,12 +395,12 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input class="plan2" type="checkbox"><label>Электрические сети</label>
+						<input class="layers-checkbox" type="checkbox" data-checkbox="electric-webs2"><label>Электрические сети</label>
 					</div>
 
-					<div class="main-layers-list-box__range">
+					<div class="main-layers-list-box__range" data-range="electric-webs2">
 						
-						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+						<input class="main-layers-list-box__range_slider" disabled type="range" min="0" max="100" value="100">
 	
 						<span class="main-layers-list-box__range_result">100</span>
 	
@@ -584,7 +661,7 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox"><label>Электрические сети</label>
+						<input type="checkbox"><label>Водопроводные сети</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -596,7 +673,34 @@
 						<i class="fas fa-sun"></i>
 
 					</div>
-        
+
+					<div class="main-layers-list-box__header">
+						<input type="checkbox"><label>Канализационные сети</label>
+					</div>
+
+					<div class="main-layers-list-box__range">
+						
+						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+	
+						<span class="main-layers-list-box__range_result">100</span>
+	
+						<i class="fas fa-sun"></i>
+
+					</div>
+					
+					<div class="main-layers-list-box__header">
+						<input type="checkbox"><label>Тепловые сети</label>
+					</div>
+
+					<div class="main-layers-list-box__range">
+						
+						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+	
+						<span class="main-layers-list-box__range_result">100</span>
+	
+						<i class="fas fa-sun"></i>
+
+					</div>
 				</div>
 
 				<h3 class="main-layers-list__item">
@@ -606,7 +710,7 @@
 				<div class="main-layers-list-box">
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox" id="electric-webs"><label for="electric-webs">Электрические сети</label>
+						<input type="checkbox" id="electric-webs"><label for="electric-webs">Школы</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -620,7 +724,7 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox"><label>Электрические сети</label>
+						<input type="checkbox"><label>Колледжи</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -633,6 +737,19 @@
 
 					</div>
         
+					<div class="main-layers-list-box__header">
+						<input type="checkbox"><label>Специальные образовательные организации</label>
+					</div>
+
+					<div class="main-layers-list-box__range">
+						
+						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+	
+						<span class="main-layers-list-box__range_result">100</span>
+	
+						<i class="fas fa-sun"></i>
+
+					</div>
 				</div>
 
 				<h3 class="main-layers-list__item">
@@ -642,7 +759,7 @@
 				<div class="main-layers-list-box">
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox" id="electric-webs"><label for="electric-webs">Электрические сети</label>
+						<input type="checkbox" id="electric-webs"><label for="electric-webs">Поликлиники</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -656,7 +773,7 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox"><label>Электрические сети</label>
+						<input type="checkbox"><label>Больницы</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -678,7 +795,7 @@
 				<div class="main-layers-list-box">
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox" id="electric-webs"><label for="electric-webs">Электрические сети</label>
+						<input type="checkbox" id="electric-webs"><label for="electric-webs">Генеральный план</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -692,7 +809,7 @@
 					</div>
 
 					<div class="main-layers-list-box__header">
-						<input type="checkbox"><label>Электрические сети</label>
+						<input type="checkbox"><label>Проекты детальной планировки</label>
 					</div>
 
 					<div class="main-layers-list-box__range">
@@ -704,7 +821,34 @@
 						<i class="fas fa-sun"></i>
 
 					</div>
-        
+
+					<div class="main-layers-list-box__header">
+						<input type="checkbox"><label>Водоохранная полоса</label>
+					</div>
+
+					<div class="main-layers-list-box__range">
+						
+						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+	
+						<span class="main-layers-list-box__range_result">100</span>
+	
+						<i class="fas fa-sun"></i>
+
+					</div>
+		
+					<div class="main-layers-list-box__header">
+						<input type="checkbox"><label>Водоохранная зона</label>
+					</div>
+
+					<div class="main-layers-list-box__range">
+						
+						<input class="main-layers-list-box__range_slider" type="range" min="0" max="100" value="100">
+	
+						<span class="main-layers-list-box__range_result">100</span>
+	
+						<i class="fas fa-sun"></i>
+
+					</div>
 				</div>
 
 			</ul>
