@@ -39,131 +39,128 @@ document.addEventListener("DOMContentLoaded", function() {
     return this;
   };
 
-// перевод рисовалки на русский язык
+	// перевод рисовалки на русский язык
   const drawToolbar = {
-	actions: {
-	  title: "Отменить рисование",
-	  text: "Отмена",
-	},
-	finish: {
-	  title: "Завершить рисование",
-	  text: "Завершить",
-	},
-	undo: {
-	  title: "Удалить последнюю нарисованную точку",
-	  text: "Удалить последнюю точку",
-	},
-	buttons: {
-	  polyline: "Нарисовать полилинию",
-	  polygon: "Нарисовать полигон",
-	  rectangle: "Нарисовать прямоугольник",
-	  circle: "Нарисовать круг",
-	  marker: "Нарисовать точку",
-	  circlemarker: "Нарисовать точку(в виде круга)",
-	},
-  };
-  
-  const drawHandlers = {
-	circle: {
-	  tooltip: {
-		start: "Кликните и перетащите для того, чтобы нарисовать круг.",
-	  },
-	  radius: "Радиус",
-	},
-	circlemarker: {
-	  tooltip: {
-		start: "Кликните на карту для установки точки.",
-	  },
-	},
-	marker: {
-	  tooltip: {
-		start: "Кликните на карту для установки точки.",
-	  },
-	},
-	polygon: {
-	  tooltip: {
-		start: "Кликните, чтобы начать рисовать контур.",
-		cont: "Кликните, чтобы завершить рисовать контур.",
-		end: "Кликните на первую точку, чтобы завершить рисование контура.",
-	  },
-	},
-	polyline: {
-	  error: "<strong>Ошибка:</strong> линия не может самопересекаться!",
-	  tooltip: {
-		start: "Кликните, чтобы начать рисовать линию.",
-		cont: "Кликните, чтобы завершить рисование линии.",
-		end: "Кликните на последнюю точку, чтобы завершить рисование линии.",
-	  },
-	},
-	rectangle: {
-	  tooltip: {
-		start: "Кликните и перетащите, чтобы нарисовать прямоугольник.",
-	  },
-	},
-	simpleshape: {
-	  tooltip: {
-		end: "Отпустите кнопку мыши для завершения рисования.",
-	  },
-	},
-  };
-  
-  const editToolbar = {
-	actions: {
-	  save: {
-		title: "Сохранить изменения.",
-		text: "Сохранить",
-	  },
-	  cancel: {
-		title: "Отменить редактирование, откатить все изменения.",
-		text: "Отмена",
-	  },
-	  clearAll: {
-		title: "Очистить все редактируемые слои.",
-		text: "Очистить всё",
-	  },
-	},
-	buttons: {
-	  edit: "Редактировать.",
-	  editDisabled: "Нет слоёв для редактирования.",
-	  remove: "Удалить.",
-	  removeDisabled: "Нет слоёв для удаления.",
-	},
-  };
-  
-  const editHandlers = {
-	edit: {
-	  tooltip: {
-		text: "Перетащите вершины или точки для редактирования фигуры.",
-		subtext: 'Нажмите "Отмена", чтобы откатить изменения.',
-	  },
-	},
-	remove: {
-	  tooltip: {
-		text: "Кликните на фигуру для удаления",
-	  },
-	},
-  };
-  
-  
-  L.drawLocal = {
-	draw: {
-	  toolbar: drawToolbar,
-	  handlers: drawHandlers,
-	},
-	edit: {
-	  toolbar: editToolbar,
-	  handlers: editHandlers,
-	},
-  };
-  //----перевод закончился----
-
-
+		actions: {
+			title: "Отменить рисование",
+			text: "Отмена",
+		},
+		finish: {
+			title: "Завершить рисование",
+			text: "Завершить",
+		},
+		undo: {
+			title: "Удалить последнюю нарисованную точку",
+			text: "Удалить последнюю точку",
+		},
+		buttons: {
+			polyline: "Нарисовать полилинию",
+			polygon: "Нарисовать полигон",
+			rectangle: "Нарисовать прямоугольник",
+			circle: "Нарисовать круг",
+			marker: "Нарисовать точку",
+			circlemarker: "Нарисовать точку(в виде круга)",
+		},
+		};
+	
+		const drawHandlers = {
+		circle: {
+			tooltip: {
+				start: "Кликните и перетащите для того, чтобы нарисовать круг.",
+			},
+			radius: "Радиус",
+		},
+		circlemarker: {
+			tooltip: {
+				start: "Кликните на карту для установки точки.",
+			},
+		},
+		marker: {
+			tooltip: {
+				start: "Кликните на карту для установки точки.",
+			},
+		},
+		polygon: {
+			tooltip: {
+				start: "Кликните, чтобы начать рисовать контур.",
+				cont: "Кликните, чтобы завершить рисовать контур.",
+				end: "Кликните на первую точку, чтобы завершить рисование контура.",
+			},
+		},
+		polyline: {
+			error: "<strong>Ошибка:</strong> линия не может самопересекаться!",
+			tooltip: {
+				start: "Кликните, чтобы начать рисовать линию.",
+				cont: "Кликните, чтобы завершить рисование линии.",
+				end: "Кликните на последнюю точку, чтобы завершить рисование линии.",
+			},
+		},
+		rectangle: {
+			tooltip: {
+				start: "Кликните и перетащите, чтобы нарисовать прямоугольник.",
+			},
+		},
+		simpleshape: {
+			tooltip: {
+				end: "Отпустите кнопку мыши для завершения рисования.",
+			},
+		},
+		};
+	
+		const editToolbar = {
+		actions: {
+			save: {
+			title: "Сохранить изменения.",
+			text: "Сохранить",
+			},
+			cancel: {
+			title: "Отменить редактирование, откатить все изменения.",
+			text: "Отмена",
+			},
+			clearAll: {
+			title: "Очистить все редактируемые слои.",
+			text: "Очистить всё",
+			},
+		},
+		buttons: {
+			edit: "Редактировать.",
+			editDisabled: "Нет слоёв для редактирования.",
+			remove: "Удалить.",
+			removeDisabled: "Нет слоёв для удаления.",
+		},
+		};
+	
+		const editHandlers = {
+			edit: {
+				tooltip: {
+				text: "Перетащите вершины или точки для редактирования фигуры.",
+				subtext: 'Нажмите "Отмена", чтобы откатить изменения.',
+				},
+			},
+			remove: {
+				tooltip: {
+				text: "Кликните на фигуру для удаления",
+				},
+			},
+		};
+	
+		L.drawLocal = {
+			draw: {
+				toolbar: drawToolbar,
+				handlers: drawHandlers,
+			},
+			edit: {
+				toolbar: editToolbar,
+				handlers: editHandlers,
+			},
+		};
+	//----перевод закончился----
+	
 	var center = [51.222269, 51.401335];
 	var mbUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 	// var mbUrl = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
 	var streets = L.tileLayer(mbUrl, {
 		id: 'mapbox.streets',
-		attribution: '&copy; <a href="http://osm.org/copyright">TOO "IT Group"</a>'
 	});
 
 	var mapboxUrl = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoieGNoamp2ZyIsImEiOiJjazd1YmwyOHowMXQwM29tb2dzaHF4c3o3In0.0TsgUa5BnaPGlx5mcGPVFg'
@@ -175,7 +172,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 
 	var statllite = L.tileLayer(mapboxUrl, {
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		maxZoom: 18,
 		id: 'mapbox.satellite',
 		tileSize: 512,
@@ -190,6 +186,74 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	L.marker(center).addTo(map);
+
+	//инициализируем слой на котором содержатся нарисованные обьекты, чтобы появилась возможность редактировать и удалять объекты	
+	var editableLayers = new L.FeatureGroup();
+	map.addLayer(editableLayers);
+
+	//настройки рисовалки
+	var drawPluginOptions = {
+		position: 'topright',
+
+		draw: {
+			polyline: {
+			metric: true
+		},
+			polygon: {
+
+			showArea: true,
+					shapeOptions: {
+						color: '#97009c',
+					},
+					allowIntersection: false, // Restricts shapes to simple polygons
+					drawError: {
+					color: '#e1e100', // Color the shape will turn when intersects
+					message: '<strong>Вы не можете рисовать так' // Message that will show when intersect
+				},
+
+			},
+
+			},
+		edit: {
+			featureGroup: editableLayers, //REQUIRED!!
+			remove: true,
+		}
+	};
+//-----настройки рисовалки закончились-----
+
+
+	// инициализируем котроллер рисовалки
+	var drawControl = new L.Control.Draw(drawPluginOptions);
+	map.addControl(drawControl);
+
+
+// события рисовалки: "после создания"
+	map.on('draw:created', function(e) {
+		var type = e.layerType,
+			layer = e.layer;
+
+		if (type === 'marker') {
+			layer.bindPopup('A popup!');
+		}
+
+		editableLayers.addLayer(layer);
+
+		var geojson = editableLayers.toGeoJSON();
+		console.log(geojson)
+	});
+
+
+	//события рисовалки "после редактирования"
+	map.on('draw:edited', function (e) {
+		var layers = e.layers;
+		var countOfEditedLayers = 0;
+		layers.eachLayer(function(layer) {
+			countOfEditedLayers++;
+		});
+		console.log("Edited " + countOfEditedLayers + " layers");
+		var geojson = editableLayers.toGeoJSON();
+			console.log(geojson)
+	});	
 	
 
 
@@ -384,6 +448,7 @@ map.on('draw:edited', function (e) {
   $("#main-layers-list").accordion({
 		collapsible: true,
 		active: false,
+		heightStyle: "content"
   });
 //--------------Всплывающее окно поиска-------------------
 	$('#open_search').on('input', function() {
@@ -395,7 +460,7 @@ map.on('draw:edited', function (e) {
 	});
 //---------------------Ползунок слоев----------------------
 	$('.main-layers-list-box__range_slider').on('input', function() {
-		$(this).parent().find('.main-layers-list-box__range_result').text($(this).val());
+		$(this).parent().find('.main-layers-list-box__range_result').text($(this).val());	
 	});
 //----------------------------------------------------
 	$('.main-languages-list__item').click(function() {
@@ -444,6 +509,14 @@ map.on('draw:edited', function (e) {
 		$('#main-panel').addClass('show-menu');
 	});
 
+	$(document).keydown(function(e) {
+		e.preventDefault;
+
+		if(e.key == 'm' || e.key == 'ь') {
+			$('#main-panel').toggleClass('show-menu');
+		}
+	})
+
 	$('#close_panel').click(function(){
 		$('#main-panel').removeClass('show-menu')
 	});
@@ -456,10 +529,16 @@ map.on('draw:edited', function (e) {
 		$('.auth').removeClass('show-auth')
 	});	
 
-	$('.plan2').click(function() {
-		let current = $(this).data('checkbox');
+	$('#phone').mask('+7 999 999 99 99');
 
-		$('[data-govno="'+current+'"]').toggleClass('active').find('.main-layers-list-box__range_slider').toggleAttr('disabled','disabled');
+	$('.layers-checkbox').click(function() {
+		$('[data-range="'+ $(this).data('checkbox') +'"]').toggleClass('active').find('.main-layers-list-box__range_slider').toggleAttr('disabled','disabled');
+	});
+
+	$('.main-panel-container__box_header').click(function() {
+		$(this).toggleClass('show');
+		$(this).parent().find('.main-panel-container__box-list').slideToggle('fast');
+		$(this).find('.fas.fa-sort-down').toggleClass('active');
 	});
 
 });
