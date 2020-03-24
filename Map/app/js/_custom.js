@@ -475,6 +475,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(this).parent().find('.main-panel-container__box-list').slideToggle('fast');
 		$(this).find('.fas.fa-sort-down').toggleClass('active');
 	});
+
 //--------------------------------------------------------------------------
 	$('.main-panel-container__box-list__item').hover(function(){
 		$('#main-dop-list').toggleClass('show')
@@ -487,6 +488,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	if($('.main-panel-container__box-list__item').children('ul').length > 0){
 		$(this).find('.children-icon').addClass('fas fa-caret-right');
 	}
+
+	$('.main-panel-container__box-list__item').click(function() {
+		$(this).toggleClass('show');
+		$(this).find('ul').slideToggle('fast');
+		$(this).find('.children-icon').toggleClass('active');
+	});
 
 //--------------------------------------------------------------------------
 });
