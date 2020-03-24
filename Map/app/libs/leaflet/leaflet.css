@@ -138,7 +138,8 @@
 	right: 0;
 	}
 .leaflet-bottom {
-	bottom: 0;
+	bottom: 5px;
+	left: 10px;
 	}
 .leaflet-left {
 	right: 0;
