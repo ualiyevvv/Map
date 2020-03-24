@@ -445,6 +445,34 @@ h1, h2, h3, h4, h5, h6, p, label
 							height: 22px
 							margin-right: 10px	
 	
+	&-dop-list
+		z-index: 799 
+		position: absolute
+		background: #fff
+		top: 60px
+		height: 773px
+		width: 350px
+		left: 410px
+		border-radius: 4px
+		padding: 10px
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-600px)
+		transition: .25s
+		&__items
+			padding: 20px			
+			li 
+				padding: 10px
+				border-bottom: $border	
+				display: flex
+				align-items: center
+				justify-content: space-between			
+		&.show
+			opacity: 1
+			visibility: visible
+			transform: translateX(0)
+
+
 	&-controls
 		z-index: 500
 		position: fixed		            
@@ -729,6 +757,41 @@ h1, h2, h3, h4, h5, h6, p, label
 				&_dachas
 					background: #d2ffbe
 					box-shadow: inset 1px 1px 1px 1px #5caf3b			
+
+	&-obj
+		position: absolute 
+		z-index: 799
+		right: 52px
+		background: #fff 
+		padding: 20px
+		width: 400px
+		height: 600px
+		border-radius: 4px
+		bottom: 20px
+		&-table
+			&:not(:last-child)
+				border-bottom: $border
+			td 
+				width: 190px
+				padding: 10px	
+				&:first-child
+					color: #000000
+					font-weight: 700
+					border-right: $border				
+	&-controll
+		border-top: $border
+		padding: 20px 55px
+		position: absolute
+		bottom: 0
+		&__btn
+			border-radius: 4px
+			padding: 5px 12px
+			border: $border !important
+			img 
+				height: 18px
+				width: 18px
+			&:hover
+				background: #eee
 
 	&-layers
 		position: absolute
