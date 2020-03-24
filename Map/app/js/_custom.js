@@ -271,6 +271,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 //----печать
 	$('#print_map').click(function() {
+		$('main, .leaflet-right, .leaflet-left').addClass('no-print');
+		print();
+	});
+
+	$('#print_block').click(function() {
+		$('main').removeClass('no-print');
+		$('.leaflet-right, .leaflet-left, .main-search, .auth-container, .main-controls').addClass('no-print');
 		print();
 	});
 
@@ -462,7 +469,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 //--------------------------------------------------------------------------
 	$('.main-panel-container__box-list__item').hover(function(){
-		$('#main-dop-list').addClass('show')
+		$('#main-dop-list').toggleClass('show')
 	});
 
 	$('#close_dop-list').click(function(){
@@ -472,5 +479,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	// if(!$('#1sadasd').children('.main-dop-list__items_down').length > 0){
 	// 		console.log(1)
 	// }
+
 //--------------------------------------------------------------------------
 });

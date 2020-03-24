@@ -445,32 +445,36 @@ h1, h2, h3, h4, h5, h6, p, label
 							height: 22px
 							margin-right: 10px	
 	
-	&-dop-list
-		z-index: 799 
-		position: absolute
-		background: #fff
-		top: 60px
-		height: 773px
-		width: 350px
-		left: 410px
-		border-radius: 4px
-		padding: 10px
-		opacity: 0
-		visibility: hidden
-		transform: translateX(-600px)
-		transition: .25s
-		&__items
-			padding: 20px			
-			li 
-				padding: 10px
-				border-bottom: $border	
-				display: flex
-				align-items: center
-				justify-content: space-between			
-		&.show
-			opacity: 1
-			visibility: visible
-			transform: translateX(0)
+	// &-dop-list
+	// 	z-index: 500 
+	// 	position: absolute
+	// 	background: #fff
+	// 	top: 60px
+	// 	height: 773px
+	// 	width: 350px
+	// 	left: 410px
+	// 	border-radius: 4px
+	// 	padding: 10px
+	// 	opacity: 0
+	// 	visibility: hidden
+	// 	transform: translateX(-100%)
+	// 	transition: .25s
+	// 	&__items
+	// 		padding: 20px			
+	// 		li 
+	// 			padding: 10px
+	// 			border-bottom: 1px solid #ccc	
+	// 			display: flex
+	// 			align-items: center
+	// 			justify-content: space-between
+	// 			cursor: pointer
+	// 			transition: .2s
+	// 			&:hover
+	// 				background: #ddd			
+	// 	&.show
+	// 		opacity: 1
+	// 		visibility: visible
+	// 		transform: translateX(0)
 
 
 	&-controls
@@ -765,12 +769,13 @@ h1, h2, h3, h4, h5, h6, p, label
 		background: #fff 
 		padding: 20px
 		width: 400px
-		height: 600px
 		border-radius: 4px
 		bottom: 20px
+		font-size: 15px	
+		.hdr
+			margin-bottom: 0
 		&-table
-			&:not(:last-child)
-				border-bottom: $border
+			border-bottom: $border
 			td 
 				width: 190px
 				padding: 10px	
@@ -779,14 +784,15 @@ h1, h2, h3, h4, h5, h6, p, label
 					font-weight: 700
 					border-right: $border				
 	&-controll
-		border-top: $border
-		padding: 20px 55px
-		position: absolute
-		bottom: 0
+		padding: 20px
+		display: flex
+		justify-content: center
 		&__btn
 			border-radius: 4px
 			padding: 5px 12px
 			border: $border !important
+			&:not(:last-of-type)
+				margin-right: 15px
 			img 
 				height: 18px
 				width: 18px
@@ -962,3 +968,5 @@ h1, h2, h3, h4, h5, h6, p, label
 		&:last-child:hover
 			line-height: 36px
 				
+// Всегда внизу 
+@import media
