@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	
 
-	var statllite = L.tileLayer(mapboxUrl, {
+	var satellite = L.tileLayer(mapboxUrl, {
 		maxZoom: 18,
 		id: 'mapbox.satellite',
 		tileSize: 512,
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var map = L.map('map', {
 		center: center,
 		zoom: 11,
-		layers:[streets]
+		layers: [streets],
 	});
 
 	L.marker(center).addTo(map);
@@ -254,6 +254,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var geojson = editableLayers.toGeoJSON();
 			console.log(geojson)
 	});	
+
+	L.control.scale().addTo(map);
 	
 
 
@@ -351,6 +353,13 @@ map.on('draw:edited', function (e) {
 
 //----печать
 	$('#print_map').click(function() {
+		$('main, .leaflet-right, .leaflet-left').addClass('no-print');
+		print();
+	});
+
+	$('#print_block').click(function() {
+		$('main').removeClass('no-print');
+		$('.leaflet-right, .leaflet-left, .main-search, .auth-container, .main-controls').addClass('no-print');
 		print();
 	});
 
@@ -540,5 +549,21 @@ map.on('draw:edited', function (e) {
 		$(this).parent().find('.main-panel-container__box-list').slideToggle('fast');
 		$(this).find('.fas.fa-sort-down').toggleClass('active');
 	});
+
+//--------------------------------------------------------------------------
+
+	if($('.main-panel-container__box-list__item').children('ul').length > 0){
+		$(this).find('.children-icon').addClass('fas fa-caret-right');
+	}
+
+	$('.main-panel-container__box-list__item').click(function() {
+		$(this).toggleClass('show');
+		$(this).find('ul').slideToggle('fast');
+		$(this).find('.children-icon').toggleClass('active');
+	});
+
+//--------------------------------------------------------------------------
+
+ $('.leaflet-control-scale').parent().removeClass('leaflet-left');
 
 });
