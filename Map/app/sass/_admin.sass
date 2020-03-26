@@ -58,7 +58,64 @@
           &:not(:last-of-type)
             margin-right: 10px
 
-    &-table
-      margin-top: 15px
+    &-table, &-table__stats
       padding: 15px   
-      height: 86%     
+      height: 86% 
+      display: none
+      transition: .3s
+      &.show 
+        display: block
+        transition: .3s
+      table 
+        margin: auto
+        width: 70%
+        thead 
+          background: #eceeef
+          tr
+            text-align: center 
+            th
+              padding: 20px
+        tbody
+          tr  
+            text-align: center 
+            &:hover
+              transition: .3s
+              background: #b9b9b9
+            th 
+              padding: 20px            
+              border-bottom: $border
+
+    &-settings
+      padding: 20px
+      text-align: center
+      select
+        cursor: pointer
+        appearance: none
+        background: none
+        border: none
+        border-bottom: $border_lines
+
+    &-paginations
+      display: flex
+      width: 199px
+      margin: auto
+      z-index: 2
+      margin-top: 20px
+      span 
+        padding: 4px
+        text-align: center
+        font-weight: 700
+        width: 35px
+        border: $border
+        &:hover
+          background: #5555
+          width: 40px
+
+
+
+       
+
+
+          
+         
+                

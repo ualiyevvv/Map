@@ -491,5 +491,16 @@ document.addEventListener("DOMContentLoaded", function() {
 //--------------------------------------------------------------------------
 
  $('.leaflet-control-scale').parent().removeClass('leaflet-left');
+ 
+//------------------ADMIN---------------------
+
+$('#stats').click(function(){
+	$('#admin-content-table').removeClass('show');
+	$('#admin-content-table__stats').addClass('show');
+	
+});
+
+//------------------ADMIN---------------------
+
 
 });

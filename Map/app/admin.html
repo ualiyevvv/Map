@@ -31,6 +31,8 @@
 
   <main class="admin">
 
+	<div id="map" style="display: none;"></div>
+
     <aside class="admin-sidebar">
 			
 			<div class="admin-sidebar__name">
@@ -49,16 +51,146 @@
 
 				<ul class="admin-content-header__menu">
 					<li><a href="/">Карта</a></li>
-					<li><a href="">Статистика</a></li>
+					<li><button id="stats">Статистика</button></li>
 				</ul>
 
 			</header>
 
-			<div class="admin-content-table">
+			<div class="admin-content-settings">
 
-
+				<select>
+					<option selected>Все пользователи</option>
+					<option>Администраторы</option>
+					<option>Пользователи</option>
+				</select>
 
 			</div>
+
+			<div id="admin-content-table" class="admin-content-table show">
+
+				<table>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Ф.И.О</th>
+							<th>Номер.тел</th>
+							<th>E-mail</th>
+							<th>Управление</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>1</th>
+							<th>ww</th>
+							<th>w</th>
+							<th>w</th>
+							<th><i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i></th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th>ww</th>
+							<th>w</th>
+							<th>w</th>
+							<th><i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i></th>
+						</tr>
+						<tr>
+							<th>3</th>
+							<th>ww</th>
+							<th>w</th>
+							<th>w</th>
+							<th><i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i></th>
+						</tr>
+						<tr>
+							<th>4</th>
+							<th>ww</th>
+							<th>w</th>
+							<th>w</th>
+							<th><i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i></th>
+						</tr>
+						<tr>
+							<th>5</th>
+							<th>ww</th>
+							<th>w</th>
+							<th>w</th>
+							<th><i class="fas fa-trash-alt"></i><i class="fas fa-edit"></i></th>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="admin-content-paginations">
+					<span><i class="fas fa-angle-double-left"></i></span>
+					<span>1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span><i class="fas fa-arrow-right"></i></span>
+				</div>
+
+			</div>
+
+			<div id="admin-content-table__stats" class="admin-content-table__stats">
+
+				<table>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Ф.И.О</th>
+							<th>Кол.за день</th>
+							<th>Кол.за месяц</th>
+							<th>Кол.за год</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>1</th>
+							<th>ww</th>
+							<th>23</th>
+							<th>33</th>
+							<th>123</th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th>ww</th>
+							<th>23</th>
+							<th>33</th>
+							<th>123</th>
+						</tr>
+						<tr>
+							<th>3</th>
+							<th>ww</th>
+							<th>23</th>
+							<th>33</th>
+							<th>123</th>
+						</tr>
+						<tr>
+							<th>4</th>
+							<th>ww</th>
+							<th>23</th>
+							<th>33</th>
+							<th>123</th>
+						</tr>
+						<tr>
+							<th>5</th>
+							<th>ww</th>
+							<th>23</th>
+							<th>33</th>
+							<th>123</th>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="admin-content-paginations">
+					<span><i class="fas fa-angle-double-left"></i></span>
+					<span>1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span><i class="fas fa-arrow-right"></i></span>
+				</div>
+
+			</div>
+
+			
 			
     </section>
 
