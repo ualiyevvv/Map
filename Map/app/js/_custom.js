@@ -503,4 +503,14 @@ $('#stats').click(function(){
 //------------------ADMIN---------------------
 
 
+//----------------------------------------------------------------------------
+
+$('.admin-sidebar__item').click(function() {
+	$('.admin-sidebar-languages__icon').removeClass('active');
+	$('.admin-sidebar-languages__lang').removeClass('active');
+
+	$(this).find('.admin-sidebar-languages__icon').addClass('active')
+	$(this).find('.admin-sidebar-languages__lang').addClass('active')
+});
+
 });
