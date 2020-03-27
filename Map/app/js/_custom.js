@@ -513,4 +513,5 @@ $('.admin-sidebar__item').click(function() {
 	$(this).find('.admin-sidebar-languages__lang').addClass('active')
 });
 
+
 });
