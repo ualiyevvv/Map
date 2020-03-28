@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	
 
-	var satellite = L.tileLayer(mapboxUrl, {
+	var statllite = L.tileLayer(mapboxUrl, {
 		maxZoom: 18,
 		id: 'mapbox.satellite',
 		tileSize: 512,
