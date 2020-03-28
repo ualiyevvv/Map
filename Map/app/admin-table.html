@@ -15,9 +15,8 @@
 
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
-
+  <link href="libs/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="libs/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="libs/plugins/font-awesome/css/all.min.css" rel="stylesheet">
   <link href="libs/plugins/icomoon/style.css" rel="stylesheet">
   <link href="libs/plugins/switchery/switchery.min.css" rel="stylesheet">
 
@@ -204,105 +203,79 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-style-1">
                 <li class="breadcrumb-item">Главная</li>
-                <li class="breadcrumb-item active" aria-current="page">Админ.панель</li>
+                <li class="breadcrumb-item">Админ.панель</li>
+                <li class="breadcrumb-item active" aria-current="page">Все пользователи</li>
               </ol>
             </nav>
-            <h1 class="page-title">Админ.панель</h1>
+            <h1 class="page-title">Все пользователи</h1>
           </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Статистика</h5>
-                  <div id="apex1"></div>
-                </div>
-              </div>
+
+          <div class="table100 ver1 m-b-110">
+            <div class="table100-head">
+              <table>
+                <thead>
+                  <tr class="row100 head">
+                    <th class="cell100 column1">Ф.И.О</th>
+                    <th class="cell100 column2">Номер телефона</th>
+                    <th class="cell100 column3">E-mail</th>
+                    <th class="cell100 column6">Посещений за месяц</th>
+                    <th class="cell100 column6">Управление</th>
+                  </tr>
+                </thead>
+              </table>
             </div>
-            <div class="col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Частые запросы</h5>
-                  <div class="trending-services">
-                    <ul class="list-unstyled slimscroll">
-                      <li>Земельные участки<div class="text-success float-right">32%<i class="fa fa-level-up"></i></div>
-                      </li>
-                      <li>Обьекты здравохранения<div class="text-success float-right">25%<i class="fa fa-level-up"></i></div>
-                      </li>
-                      <li>Обьекты образования<div class="text-success float-right">16%<i class="fa fa-level-up"></i></div>
-                      </li>
-                      <li>Очередь на жилье<div class="text-danger float-right">4%<i class="fa fa-level-down"></i></div>
-                      </li>
-                      <li>Инвестиции<div class="text-danger float-right">17%<i class="fa fa-level-down"></i></div>
-                      </li>
-                      <li>Дворы<div class="text-success float-right">14%<i class="fa fa-level-up"></i></div>
-                      </li>
-                      <li>План застройки<div class="text-danger float-right">9%<i class="fa fa-level-down"></i></div>
-                      </li>
-                      <li>Освещения<div class="text-danger float-right">27%<i class="fa fa-level-down"></i></div>
-                      </li>
-                      <li>Озеленения<div class="text-success float-right">16%<i class="fa fa-level-up"></i></div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  
+            <div class="table100-body js-pscroll">
+              <table>
+                <tbody>
+                  <tr class="row100 body">
+                    <td class="cell100 column1">Like a butterfly</td>
+                    <td class="cell100 column2">Boxing</td>
+                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                    <td class="cell100 column4">Aaron Chapman</td>
+                    <td class="cell100 column5 edit"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></td>
+                  </tr>   
+                  <tr class="row100 body">
+                    <td class="cell100 column1">Like a butterfly</td>
+                    <td class="cell100 column2">Boxing</td>
+                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                    <td class="cell100 column4">Aaron Chapman</td>
+                    <td class="cell100 column5 edit"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></td>
+                  </tr>  
+                  <tr class="row100 body">
+                    <td class="cell100 column1">Like a butterfly</td>
+                    <td class="cell100 column2">Boxing</td>
+                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                    <td class="cell100 column4">Aaron Chapman</td>
+                    <td class="cell100 column5 edit"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></td>
+                  </tr>   <tr class="row100 body">
+                    <td class="cell100 column1">Like a butterfly</td>
+                    <td class="cell100 column2">Boxing</td>
+                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                    <td class="cell100 column4">Aaron Chapman</td>
+                    <td class="cell100 column5 edit"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></td>
+                  </tr>   <tr class="row100 body">
+                    <td class="cell100 column1">Like a butterfly</td>
+                    <td class="cell100 column2">Boxing</td>
+                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                    <td class="cell100 column4">Aaron Chapman</td>
+                    <td class="cell100 column5 edit"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></td>
+                  </tr> 
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="alert alert-info alert-dismissible fade show m-b-md" role="alert">
-                Activity reports have been updated 2 days ago. <a href="#" class="alert-link">Click here</a> to see the
-                old data.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-              <div class="card">
-                <div class="card-body">
-                  <div class="info-card">
-                    <h4 class="info-title">Кол-во зарегистрированных<span class="info-stats">45.6k</span></h4>
-                    <div class="progress" style="height: 3px;">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm">
-              <div class="card">
-                <div class="card-body">
-                  <div class="info-card">
-                    <h4 class="info-title">Кол-во активных<span class="info-stats">1.2k</span></h4>
-                    <div class="progress" style="height: 3px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm">
-              <div class="card">
-                <div class="card-body">
-                  <div class="info-card">
-                    <h4 class="info-title">Кол-во писем<span class="info-stats">2.4k</span></h4>
-                    <div class="progress" style="height: 3px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div><!-- Main Wrapper -->
 
+        <div class="pagination">
+            <span><i class="fas fa-chevron-double-left"></i></span>
+            <span>1</span>
+            <span class="active">2</span>
+            <span>3</span>
+            <span>4</span>
+            <span><i class="fas fa-chevron-right"></i></span>
+        </div>
 
         <div class="page-footer" style="display: flex;justify-content: space-between;">
           <p>2020 &copy; IT Group </p>

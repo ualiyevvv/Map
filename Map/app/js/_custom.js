@@ -491,6 +491,17 @@ document.addEventListener("DOMContentLoaded", function() {
 //--------------------------------------------------------------------------
 
  $('.leaflet-control-scale').parent().removeClass('leaflet-left');
+ 
+//------------------ADMIN---------------------
+
+$('#stats').click(function(){
+	$('#admin-content-table').removeClass('show');
+	$('#admin-content-table__stats').addClass('show');
+	
+});
+
+//------------------ADMIN---------------------
+
 
 //----------------------------------------------------------------------------
 
@@ -501,5 +512,6 @@ $('.admin-sidebar__item').click(function() {
 	$(this).find('.admin-sidebar-languages__icon').addClass('active')
 	$(this).find('.admin-sidebar-languages__lang').addClass('active')
 });
+
 
 });
