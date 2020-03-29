@@ -226,6 +226,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	var drawControl = new L.Control.Draw(drawPluginOptions);
 	map.addControl(drawControl);
 
+	
+	map.addControl(L.control.styleEditor({
+		position: 'topleft',
+		markers: ['circle-stroked', 'circle', 'square-stroked', 'square']
+	}))
+	
+
 
 // события рисовалки: "после создания"
 	map.on('draw:created', function(e) {
@@ -256,8 +263,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	});	
 
 	L.control.scale().addTo(map);
-	
 
+	
 
 
 //---------смена спутника----------
