@@ -110,8 +110,9 @@
 
 </div>
 
-	<main  class="main">
-		<div id="map"></div>
+	<div id="map"></div>
+
+	<main class="main">
 
 		<div class="main-search">
 			<div class="main-search-container">	
@@ -151,7 +152,7 @@
 			<button id="open_panel"><i class="fas fa-bars"></i></button>
 		</nav>
 
-		<div class="main-panel show-menu" id="main-panel">
+		<div class="main-panel" id="main-panel">
 
 			<div class="cross">
 				<button id="close_panel">&times;</button>
@@ -169,9 +170,23 @@
 	
 					<ul class="main-panel-container__box-list">
 	
-						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
-						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
-						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item">
+
+							<div class="main-panel-container__box-list__item_type">
+								<img src="img/objects/izvest.png" alt="Иконка известняка">Пример<i class="children-icon"></i>
+							</div>
+
+							<ul>
+								<li>fff</li>
+								<li>fff</li>
+								<li>fff</li>
+								<li>fff</li>
+							</ul>
+
+						</li>
+
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример<i></i></li>
+						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример<i></i></li>
 		
 					</ul>
 
@@ -183,7 +198,10 @@
 	
 					<ul class="main-panel-container__box-list">
 	
-						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
+						<li class="main-panel-container__box-list__item">
+							<img src="img/objects/izvest.png" alt="Иконка известняка">Пример<i></i>
+						</li>
+
 						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
 						<li class="main-panel-container__box-list__item"><img src="img/objects/izvest.png" alt="Иконка известняка">Пример</li>
 		
@@ -222,6 +240,27 @@
 			</div>
 
 		</div>
+		
+		<!-- <div class="main-dop-list" id="main-dop-list">
+
+			<div class="main-filter__cross">
+				<button id="close_dop-list">&times;</button>
+			</div>
+
+			<ul class="main-dop-list__items">
+				<li>Для временного размещения столярного цеха<i class="fas fa-caret-right"></i></li>
+				<li>Для временного размещения торгового павилиона<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+				<li>Для комерчиских целей<i class="fas fa-caret-right"></i></li>
+			</ul>
+
+		</div> -->
 
 		<nav class="main-controls main-controls--horizontal">
 			<button class="main-controls__btn" title="Меню" id="open_layers"><i class="fas fa-layer-group"></i></button> 
@@ -286,8 +325,8 @@
 			<h2 class="hdr">Спутник</h2>
 
 			<ul class="main-satellite-list">
-				<li class="main-satellite-list__item street"><i class="fas fa-times"></i>Отключен</li>
-				<li class="main-satellite-list__item statllite" ><img src="img/bing_map.png" alt="Режим спутника">Bing</li>
+				<li class="main-satellite-list__item street active"><i class="fas fa-times"></i>Отключен</li>
+				<li class="main-satellite-list__item statllite"><img src="img/bing_map.png" alt="Режим спутника">Bing</li>
 				<li class="main-satellite-list__item"><img src="img/google_map.png" alt="Режим спутника">Google</li>
 			</ul>	
 
@@ -363,7 +402,56 @@
 			
 		</div>
 
-		
+		<!-- <div class="main-obj" id="main-obj">
+
+			<div class="cross">
+				<button id="close_obj">&times;</button>
+			</div>
+
+			<h2 class="hdr">Информация</h2>
+			
+			<table>
+				<tbody>
+					<tr class="main-obj-table">
+						<td>Название</td>
+						<td>5-ти эт. Жилой дом</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Категория</td>
+						<td>коммерческие дома</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Срок завершения</td>
+						<td>2020</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Кол-во квартир</td>
+						<td>75</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Подрядчик</td>
+						<td>ТОО "СВС Батыс"</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Текущее состояние</td>
+						<td>на разработке</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Конструктив</td>
+						<td>кирпичный</td>
+					</tr>
+					<tr class="main-obj-table">
+						<td>Контактные данные</td>
+						<td>87013749956 Замир</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="main-controll">
+				<button class="main-controll__btn" id="print_block"><img src="img/printer.png"></button>
+				<button class="main-controll__btn">Получить консультацию</button>
+			</div>
+		</div> -->
 
 		<div class="main-layers" id="main-layers">
 
@@ -855,6 +943,10 @@
 		</div>
 
 	</main>
+
+	<footer class="footer-info">
+
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
 

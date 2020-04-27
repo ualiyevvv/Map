@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var map = L.map('map', {
 		center: center,
 		zoom: 11,
-		layers:[streets]
+		layers: [streets],
 	});
 
 	L.marker(center).addTo(map);
@@ -226,6 +226,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	var drawControl = new L.Control.Draw(drawPluginOptions);
 	map.addControl(drawControl);
 
+	
+	map.addControl(L.control.styleEditor({
+		position: 'topleft',
+		markers: ['circle-stroked', 'circle', 'square-stroked', 'square']
+	}))
+	
+
 
 // события рисовалки: "после создания"
 	map.on('draw:created', function(e) {
@@ -254,77 +261,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		var geojson = editableLayers.toGeoJSON();
 			console.log(geojson)
 	});	
+
+	L.control.scale().addTo(map);
+
 	
 
-
-
-//инициализируем слой на котором содержатся нарисованные обьекты, чтобы появилась возможность редактировать и удалять объекты	
-var editableLayers = new L.FeatureGroup();
-map.addLayer(editableLayers);
-
-//настройки рисовалки
-var drawPluginOptions = {
-  position: 'topright',
-  
-  draw: {
-    polyline: {
-		metric: true
-	},
-    polygon: {
-
-		showArea: true,
-      	shapeOptions: {
-			color: '#97009c',
-      	},
-      	allowIntersection: false, // Restricts shapes to simple polygons
-      	drawError: {
-       	 color: '#e1e100', // Color the shape will turn when intersects
-       	 message: '<strong>Oh snap!<strong> you can\'t draw that!' // Message that will show when intersect
-     	 },
-      
-    },
-    
-    },
-  edit: {
-    featureGroup: editableLayers, //REQUIRED!!
-    remove: true,
-  }
-};
-//-----настройки рисовалки закончились-----
-
-
-// инициализируем котроллер рисовалки
-var drawControl = new L.Control.Draw(drawPluginOptions);
-map.addControl(drawControl);
-
-
-// события рисовалки: "после создания"
-map.on('draw:created', function(e) {
-  var type = e.layerType,
-    layer = e.layer;
-
-  if (type === 'marker') {
-    layer.bindPopup('A popup!');
-  }
-
-  editableLayers.addLayer(layer);
-
-  var geojson = editableLayers.toGeoJSON();
-  console.log(geojson)
-});
-
-
-//события рисовалки "после редактирования"
-map.on('draw:edited', function (e) {
-			var layers = e.layers;
-			var countOfEditedLayers = 0;
-			layers.eachLayer(function(layer) {
-				countOfEditedLayers++;
-			});
-			console.log("Edited " + countOfEditedLayers + " layers");
-			var geojson = editableLayers.toGeoJSON();
-  			console.log(geojson)
-		});
 
 //---------смена спутника----------
 
@@ -351,6 +292,13 @@ map.on('draw:edited', function (e) {
 
 //----печать
 	$('#print_map').click(function() {
+		$('main, .leaflet-right, .leaflet-left').addClass('no-print');
+		print();
+	});
+
+	$('#print_block').click(function() {
+		$('main').removeClass('no-print');
+		$('.leaflet-right, .leaflet-left, .main-search, .auth-container, .main-controls').addClass('no-print');
 		print();
 	});
 
@@ -540,5 +488,43 @@ map.on('draw:edited', function (e) {
 		$(this).parent().find('.main-panel-container__box-list').slideToggle('fast');
 		$(this).find('.fas.fa-sort-down').toggleClass('active');
 	});
+
+//--------------------------------------------------------------------------
+
+	if($('.main-panel-container__box-list__item').children('ul').length > 0){
+		$(this).find('.children-icon').addClass('fas fa-caret-right');
+	}
+
+	$('.main-panel-container__box-list__item').click(function() {
+		$(this).toggleClass('show');
+		$(this).find('ul').slideToggle('fast');
+		$(this).find('.children-icon').toggleClass('active');
+	});
+
+//--------------------------------------------------------------------------
+
+ $('.leaflet-control-scale').parent().removeClass('leaflet-left');
+ 
+//------------------ADMIN---------------------
+
+$('#stats').click(function(){
+	$('#admin-content-table').removeClass('show');
+	$('#admin-content-table__stats').addClass('show');
+	
+});
+
+//------------------ADMIN---------------------
+
+
+//----------------------------------------------------------------------------
+
+$('.admin-sidebar__item').click(function() {
+	$('.admin-sidebar-languages__icon').removeClass('active');
+	$('.admin-sidebar-languages__lang').removeClass('active');
+
+	$(this).find('.admin-sidebar-languages__icon').addClass('active')
+	$(this).find('.admin-sidebar-languages__lang').addClass('active')
+});
+
 
 });

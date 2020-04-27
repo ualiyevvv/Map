@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive Admin Dashboard Template">
+  <meta name="keywords" content="admin,dashboard">
+  <meta name="author" content="stacks">
+  <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <!-- Title -->
+  <title>Геопортал | Админ панель</title>
+
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
+
+  <link href="libs/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="libs/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+  <link href="libs/plugins/icomoon/style.css" rel="stylesheet">
+  <link href="libs/plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+  <!-- Theme Styles -->
+  <link href="css/concept.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+  <!-- Page Container -->
+  <div class="page-container">
+    <!-- Page Sidebar -->
+    <div class="page-sidebar">
+      <div class="profile-menu">
+        <a href="app-profile.html">
+          <img src="images/avatars/avatar1.png" alt="">
+        </a>
+      </div>
+      <div class="page-sidebar-inner">
+        <div class="page-sidebar-menu">
+          <ul>
+            <li>
+              <a href="#" data-toggle="tooltip" data-placement="right" title="Геопортал"><i
+                  class="fas fa-rocket"></i></a>
+            </li>
+            <li>
+              <a href="#" data-toggle="tooltip" data-placement="right" title="Языки"><i
+                  class="fas fa-globe-africa"></i></a>
+            </li>
+            <li>
+              <a href="#" data-toggle="tooltip" data-placement="right" title="Сообщения"><i class="fas fa-inbox"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="settings-menu-btn">
+        <a href="#" class="settings-menu-link"><i class="fas fa-wrench"></i></a>
+      </div>
+    </div><!-- /Page Sidebar -->
+    <div class="settings-sidebar">
+      <div class="settings-sidebar-content">
+        <div class="settings-sidebar-header">
+          <span>Настройки</span>
+          <a href="javascript: void(0);" class="settings-menu-close"><i class="icon-close"></i></a>
+        </div>
+        <div class="right-sidebar-settings">
+          <span class="settings-title">Общие настройки</span>
+          <ul class="sidebar-setting-list list-unstyled">
+            <li>
+              <span class="settings-option">Уведомления</span><input type="checkbox" class="js-switch" checked />
+            </li>
+            <li>
+              <span class="settings-option">Действия</span><input type="checkbox" class="js-switch" checked />
+            </li>
+            <li>
+              <span class="settings-option">Авто.обнавления</span><input type="checkbox" class="js-switch" />
+            </li>
+            <li>
+              <span class="settings-option">Разрешенные бэкапы</span><input type="checkbox" class="js-switch" />
+            </li>
+          </ul>
+          <span class="settings-title">Настройки аккаунта</span>
+          <ul class="sidebar-setting-list list-unstyled">
+            <li>
+              <span class="settings-option">Чат</span><input type="checkbox" class="js-switch" checked />
+            </li>
+            <li>
+              <span class="settings-option">Режим инкогнит</span><input type="checkbox" class="js-switch" />
+            </li>
+            <li>
+              <span class="settings-option">Публичный профиль</span><input type="checkbox" class="js-switch" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="settings-overlay"></div>
+    <!-- Page Content -->
+    <div class="page-content">
+      <div class="secondary-sidebar">
+        <div class="secondary-sidebar-bar">
+          <a href="#" class="logo-box">Геопортал</a>
+        </div>
+        <div class="secondary-sidebar-menu">
+          <ul class="accordion-menu">
+            <li class="active-page">
+              <a href="index.html">
+                <i class="menu-icon icon-home4"></i><span>Панель</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon icon-apps"></i><span>Приложения</span><i class="accordion-icon fas fa-angle-left"></i>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="app-mailbox.html">Почтовый ящик</a></li>
+                <li><a href="app-todo.html">Список дел</a></li>
+                <li><a href="app-contacts.html">Контакты</a></li>
+                <li><a href="app-profile.html">Профиль</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="fas fa-users-cog menu-icon"></i><span>Управление</span><i class="accordion-icon fas fa-angle-left"></i>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="app-mailbox.html">Все пользователи</a></li>
+                <li><a href="app-todo.html">Создать категорию</a></li>
+                <li><a href="app-contacts.html">Создать Материал</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="search-form">
+          <form action="#" method="GET">
+            <div class="input-group">
+              <input type="text" name="search" class="form-control search-input" placeholder="Type something...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" id="close-search" type="button"><i class="icon-close"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <nav class="navbar navbar-default navbar-expand-md">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <div class="logo-sm">
+                <a href="javascript:void(0)" id="sidebar-toggle-button"><i class="fas fa-bars"></i></a>
+                <a class="logo-box" href="index.html"><span>Геопортал</span></a>
+              </div>
+              <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse justify-content-between" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="collapsed-sidebar-toggle-inv"><a href="javascript:void(0)"
+                    id="collapsed-sidebar-toggle-button"><i class="fas fa-bars"></i></a></li>
+                <li><a href="javascript:void(0)" id="toggle-fullscreen"><i class="fas fa-expand"></i></a></li>
+                <li><a href="javascript:void(0)" id="search-button"><i class="fas fa-search"></i></a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+            <ul class="nav navbar-nav">
+              
+                </ul>
+              </li>
+              <li class="dropdown nav-item d-md-block">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false"><img src="images/avatars/avatar1.png" alt=""
+                    class="rounded-circle"></a>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <li><a href="#">Профиль</a></li>
+                  <li><a href="#">Календарь</a></li>
+                  <li><a href="#"><span class="badge float-right badge-info">64</span>Сообщения</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Настройки</a></li>
+                  <li><a href="#">Выйти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div><!-- /Page Header -->
+      <!-- Page Inner -->
+      <div class="page-inner no-page-title">
+        <div id="main-wrapper">
+          <div class="content-header">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style-1">
+                <li class="breadcrumb-item">Главная</li>
+                <li class="breadcrumb-item active" aria-current="page">Админ.панель</li>
+              </ol>
+            </nav>
+            <h1 class="page-title">Админ.панель</h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Статистика</h5>
+                  <div id="apex1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Частые запросы</h5>
+                  <div class="trending-services">
+                    <ul class="list-unstyled slimscroll">
+                      <li>Земельные участки<div class="text-success float-right">32%<i class="fa fa-level-up"></i></div>
+                      </li>
+                      <li>Обьекты здравохранения<div class="text-success float-right">25%<i class="fa fa-level-up"></i></div>
+                      </li>
+                      <li>Обьекты образования<div class="text-success float-right">16%<i class="fa fa-level-up"></i></div>
+                      </li>
+                      <li>Очередь на жилье<div class="text-danger float-right">4%<i class="fa fa-level-down"></i></div>
+                      </li>
+                      <li>Инвестиции<div class="text-danger float-right">17%<i class="fa fa-level-down"></i></div>
+                      </li>
+                      <li>Дворы<div class="text-success float-right">14%<i class="fa fa-level-up"></i></div>
+                      </li>
+                      <li>План застройки<div class="text-danger float-right">9%<i class="fa fa-level-down"></i></div>
+                      </li>
+                      <li>Освещения<div class="text-danger float-right">27%<i class="fa fa-level-down"></i></div>
+                      </li>
+                      <li>Озеленения<div class="text-success float-right">16%<i class="fa fa-level-up"></i></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="alert alert-info alert-dismissible fade show m-b-md" role="alert">
+                Activity reports have been updated 2 days ago. <a href="#" class="alert-link">Click here</a> to see the
+                old data.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <div class="info-card">
+                    <h4 class="info-title">Кол-во зарегистрированных<span class="info-stats">45.6k</span></h4>
+                    <div class="progress" style="height: 3px;">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <div class="info-card">
+                    <h4 class="info-title">Кол-во активных<span class="info-stats">1.2k</span></h4>
+                    <div class="progress" style="height: 3px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="card">
+                <div class="card-body">
+                  <div class="info-card">
+                    <h4 class="info-title">Кол-во писем<span class="info-stats">2.4k</span></h4>
+                    <div class="progress" style="height: 3px;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- Main Wrapper -->
+
+
+        <div class="page-footer" style="display: flex;justify-content: space-between;">
+          <p>2020 &copy; IT Group </p>
+          <p style="color: transparent;font-size: 13px;">Rapidy, QIPS</p>
+        </div>
+      </div><!-- /Page Inner -->
+      <div class="page-right-sidebar" id="main-right-sidebar">
+        <div class="page-right-sidebar-inner">
+          <div class="right-sidebar-top">
+            <span class="chat-header">Chat</span>
+            <a href="javascript:void(0)" class="right-sidebar-toggle right-sidebar-close"
+              data-sidebar-id="main-right-sidebar"><i class="icon-close"></i></a>
+          </div>
+          <div class="right-sidebar-content">
+            <!-- Tab panes -->
+            <div class="chat-list">
+              <span class="chat-title">Recent</span>
+              <a href="javascript:void(0);" class="right-sidebar-toggle chat-item unread"
+                data-sidebar-id="chat-right-sidebar">
+                <div class="user-avatar">
+                  <img src="images/avatars/avatar1.png" alt="">
+                </div>
+                <div class="chat-info">
+                  <span class="chat-author">David</span>
+                  <span class="chat-text">Hello there!</span>
+                  <span class="chat-time">16:20</span>
+                </div>
+              </a>
+              <a href="javascript:void(0);" class="right-sidebar-toggle chat-item unread active-user"
+                data-sidebar-id="chat-right-sidebar">
+                <div class="user-avatar">
+                  <img src="images/avatars/avatar2.png" alt="">
+                </div>
+                <div class="chat-info">
+                  <span class="chat-author">Bob</span>
+                  <span class="chat-text">Hello there!</span>
+                  <span class="chat-time">11:34</span>
+                </div>
+              </a>
+            </div>
+            <div class="chat-list">
+              <span class="chat-title">Older</span>
+              <a href="javascript:void(0);" class="right-sidebar-toggle chat-item" data-sidebar-id="chat-right-sidebar">
+                <div class="user-avatar">
+                  <img src="images/avatars/avatar3.png" alt="">
+                </div>
+                <div class="chat-info">
+                  <span class="chat-author">Tom</span>
+                  <span class="chat-text">Hello there!</span>
+                  <span class="chat-time">2d</span>
+                </div>
+              </a>
+              <a href="javascript:void(0);" class="right-sidebar-toggle chat-item active-user"
+                data-sidebar-id="chat-right-sidebar">
+                <div class="user-avatar">
+                  <img src="images/avatars/avatar4.png" alt="">
+                </div>
+                <div class="chat-info">
+                  <span class="chat-author">Anna</span>
+                  <span class="chat-text">Hello there!</span>
+                  <span class="chat-time">4d</span>
+                </div>
+              </a>
+              <a href="javascript:void(0);" class="right-sidebar-toggle chat-item active-user"
+                data-sidebar-id="chat-right-sidebar">
+                <div class="user-avatar">
+                  <img src="images/avatars/avatar5.png" alt="">
+                </div>
+                <div class="chat-info">
+                  <span class="chat-author">Noah</span>
+                  <span class="chat-text">Hello there!</span>
+                  <span class="chat-time">&nbsp;</span>
+                </div>
+              </a>
+              <a href="javascript:void(0);" class="load-more-messages" data-toggle="tooltip" data-placement="bottom"
+                title="Load More">&bull;&bull;&bull;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-right-sidebar" id="chat-right-sidebar">
+        <div class="page-right-sidebar-inner">
+          <div class="right-sidebar-top">
+            <div class="chat-top-info">
+              <span class="chat-name">Noah</span>
+              <span class="chat-state">2h ago</span>
+            </div>
+            <a href="javascript:void(0)" class="right-sidebar-toggle chat-sidebar-close float-right"
+              data-sidebar-id="chat-right-sidebar"><i class="icon-keyboard_arrow_right"></i></a>
+          </div>
+          <div class="right-sidebar-content">
+            <div class="right-sidebar-chat slimscroll">
+              <div class="chat-bubbles">
+                <div class="chat-start-date">02/06/2017 5:58PM</div>
+                <div class="chat-bubble them">
+                  <div class="chat-bubble-img-container">
+                    <img src="images/avatars/avatar1.png" alt="">
+                  </div>
+                  <div class="chat-bubble-text-container">
+                    <span class="chat-bubble-text">Hello</span>
+                  </div>
+                </div>
+                <div class="chat-bubble me">
+                  <div class="chat-bubble-text-container">
+                    <span class="chat-bubble-text">Hello!</span>
+                  </div>
+                </div>
+                <div class="chat-start-date">03/06/2017 4:22AM</div>
+                <div class="chat-bubble me">
+                  <div class="chat-bubble-text-container">
+                    <span class="chat-bubble-text">lorem</span>
+                  </div>
+                </div>
+                <div class="chat-bubble them">
+                  <div class="chat-bubble-img-container">
+                    <img src="images/avatars/avatar1.png" alt="">
+                  </div>
+                  <div class="chat-bubble-text-container">
+                    <span class="chat-bubble-text">ipsum dolor sit amet</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-write">
+              <form class="form-horizontal" action="javascript:void(0);">
+                <input type="text" class="form-control" placeholder="Say something">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /Page Content -->
+  </div><!-- /Page Container -->
+
+
+  <!-- Javascripts -->
+  <script src="libs/plugins/jquery/jquery-3.1.0.min.js"></script>
+  <script src="libs/plugins/bootstrap/popper.min.js"></script>
+  <script src="libs/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="libs/plugins/switchery/switchery.min.js"></script>
+  <script src="libs/plugins/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="js/concept.min.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+</body>
+
+</html>

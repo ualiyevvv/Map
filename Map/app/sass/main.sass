@@ -128,12 +128,11 @@ h1, h2, h3, h4, h5, h6, p, label
 // -----------------------------------------------
 
 #map
-	position: fixed
-	top: -15px
+	position: absolute
 	left: 0
 	right: 0
 	bottom: 0
-	height: 110vh
+	height: 100vh
 
 .auth
 	opacity: 0
@@ -428,8 +427,6 @@ h1, h2, h3, h4, h5, h6, p, label
 				&-list
 					display: none						
 					&__item
-						display: flex
-						align-items: center
 						border-bottom: 1px solid #eee
 						padding: 7px 10px
 						font-size: 15px
@@ -439,12 +436,70 @@ h1, h2, h3, h4, h5, h6, p, label
 						&:last-of-type
 							border: none
 						&:hover
-							background: #e4e4e4	
+							background: #e4e4e4
+						&_type
+							display: flex
+							align-items: center
+							i
+								transition: .2s
+								&.active
+									color: #888888
+									transform: rotate(90deg)
+						ul
+							display: none
+							margin-top: 15px
+							li
+								padding: 7px 0 7px 30px
+								transition: .2s
+								&:not(:last-of-type)
+									border-bottom: 1px solid #ddd
+								&:hover
+									background: #bbb
+									padding: 7px 0 7px 34px								
+						&.show
+							background: #eee	
 						img
 							width: 22px	
 							height: 22px
-							margin-right: 10px	
+							margin-right: 13px
+						i
+							margin-left: auto
+							height: 12px
+							font-size: 16px	
+							color: #555		
 	
+	// &-dop-list
+	// 	z-index: 500 
+	// 	position: absolute
+	// 	background: #fff
+	// 	top: 60px
+	// 	height: 773px
+	// 	width: 350px
+	// 	left: 410px
+	// 	border-radius: 4px
+	// 	padding: 10px
+	// 	opacity: 0
+	// 	visibility: hidden
+	// 	transform: translateX(-100%)
+	// 	transition: .25s
+	// 	&__items
+	// 		padding: 20px			
+	// 		li 
+	// 			padding: 10px
+	// 			border-bottom: 1px solid #ccc	
+	// 			display: flex
+	// 			align-items: center
+	// 			justify-content: space-between
+	// 			cursor: pointer
+	// 			transition: .2s
+	// 			&:hover
+	// 				background: #ddd			
+	// 	&.show
+	// 		opacity: 1
+	// 		visibility: visible
+	// 		transform: translateX(0)
+
+
 	&-controls
 		z-index: 500
 		position: fixed		            
@@ -730,6 +785,43 @@ h1, h2, h3, h4, h5, h6, p, label
 					background: #d2ffbe
 					box-shadow: inset 1px 1px 1px 1px #5caf3b			
 
+	&-obj
+		position: absolute 
+		z-index: 500
+		right: 52px
+		background: #fff 
+		padding: 20px
+		width: 400px
+		border-radius: 4px
+		bottom: 20px
+		font-size: 15px	
+		.hdr
+			margin-bottom: 0
+		&-table
+			border-bottom: $border
+			td 
+				width: 190px
+				padding: 10px	
+				&:first-child
+					color: #000000
+					font-weight: 700
+					border-right: $border				
+	&-controll
+		padding: 20px
+		display: flex
+		justify-content: center
+		&__btn
+			border-radius: 4px
+			padding: 5px 12px
+			border: $border !important
+			&:not(:last-of-type)
+				margin-right: 15px
+			img 
+				height: 18px
+				width: 18px
+			&:hover
+				background: #eee
+
 	&-layers
 		position: absolute
 		z-index: 799
@@ -898,4 +990,12 @@ h1, h2, h3, h4, h5, h6, p, label
 			line-height: 35px	
 		&:last-child:hover
 			line-height: 36px
+
+.leaflet-control-scale-line
+	border: 2px solid #aaa
+	font-size: 13px
+	&:last-of-type
+		display: none			
 				
+// Всегда внизу 
+@import media
